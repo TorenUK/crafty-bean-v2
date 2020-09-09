@@ -1,0 +1,28 @@
+.gifts {
+  min-height: 100%;
+  scroll-snap-align: start;
+  text-align: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.gifts__items {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.gifts > h1 {
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 1024px) {
+  .gifts {
+    height: fit-content;
+  }
+}

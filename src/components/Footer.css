@@ -1,6 +1,8 @@
 .footer {
-  height: 4vh;
+  height: 15%;
+  width: 100%;
   text-align: center;
-  background-color: #fdd2dc;
-  border-top: 2px solid white;
+  background-color: #ffb6ca;
+  position: absolute;
+  bottom: 0;
 }

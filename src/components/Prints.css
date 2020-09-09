@@ -1,0 +1,11 @@
+.prints {
+  height: 100%;
+  text-align: center;
+  background-color: #ffb6ca;
+  color: white;
+  scroll-snap-align: start;
+}
+
+.prints > h1 {
+  font-weight: 400;
+}

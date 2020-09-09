@@ -2,14 +2,18 @@
   display: grid;
   place-items: center;
   height: 100vh;
-  background-color: #dadbd3;
+  background-color: white;
 }
 
 .app__body {
-  display: flex;
-  flex-direction: column;
   background-color: white;
   height: 95vh;
-  width: 99vw;
+  width: 97vw;
   box-shadow: -1px 4px 20px 1px rgba(0, 0, 0, 0.75);
+  overflow-y: scroll;
+  scroll-snap-type: y;
+}
+
+.app__body::-webkit-scrollbar {
+  display: none;
 }

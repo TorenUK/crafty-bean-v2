@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
-import Nav from "./components/Nav";
-import Content from "./components/Content";
-import Footer from "./components/Footer";
+import Landing from "./components/Landing";
+import Gifts from "./components/Gifts";
+import Prints from "./components/Prints";
+import Info from "./components/Info";
 
 function App() {
   return (
@@ -14,10 +14,10 @@ function App() {
         <div className="app__body">
           <Switch>
             <Route path="/">
-              <Header />
-              <Nav />
-              <Content />
-              <Footer />
+              <Landing />
+              <Gifts />
+              <Prints />
+              <Info />
             </Route>
           </Switch>
         </div>
