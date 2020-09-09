@@ -5,7 +5,7 @@
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .gifts__items {
@@ -19,6 +19,7 @@
 
 .gifts > h1 {
   font-weight: 400;
+  padding: 20px;
 }
 
 @media only screen and (max-width: 1024px) {

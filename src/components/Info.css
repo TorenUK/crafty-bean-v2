@@ -2,7 +2,7 @@
   min-height: 100%;
   scroll-snap-align: start;
   text-align: center;
-  background-color: #659262;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -10,4 +10,5 @@
 
 .info > h1 {
   font-weight: 400;
+  padding: 20px;
 }

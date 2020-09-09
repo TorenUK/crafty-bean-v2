@@ -4,20 +4,9 @@ import GiftIem from "./GiftItem";
 
 function Gifts() {
   return (
-    <div className="gifts">
+    <div id="gifts" className="gifts">
       <h1>Personalised Gifts</h1>
       <div className="gifts__items">
-        <GiftIem />
-        <GiftIem />
-        <GiftIem />
-        <GiftIem />
-        <GiftIem />
-        <GiftIem />
-        <GiftIem />
-        <GiftIem />
-        <GiftIem />
-        <GiftIem />
-        <GiftIem />
         <GiftIem />
       </div>
     </div>
