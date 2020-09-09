@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   background-color: white;
-  height: 97vh;
-  width: 95vw;
+  height: 95vh;
+  width: 99vw;
   box-shadow: -1px 4px 20px 1px rgba(0, 0, 0, 0.75);
 }

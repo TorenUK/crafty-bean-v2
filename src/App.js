@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
             <Route path="/">
               <Header />
               <Nav />
+              <Content />
+              <Footer />
             </Route>
           </Switch>
         </div>
