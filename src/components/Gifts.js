@@ -1,12 +1,19 @@
 import React from "react";
 import "./Gifts.css";
 import GiftIem from "./GiftItem";
+import database from "firebase";
 
 function Gifts() {
   return (
     <div id="gifts" className="gifts">
-      <h1>Personalised Gifts</h1>
-      <div className="gifts__items">
+      <div className="gifts__container">
+        <GiftIem />
+        <GiftIem />
+        <GiftIem />
+        <GiftIem />
+        <GiftIem />
+        <GiftIem />
+        <GiftIem />
         <GiftIem />
       </div>
     </div>

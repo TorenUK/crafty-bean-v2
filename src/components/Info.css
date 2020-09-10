@@ -2,13 +2,20 @@
   min-height: 100%;
   scroll-snap-align: start;
   text-align: center;
-  background-color: #fff;
+  background-color: #ffb6ca;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
 .info > h1 {
   font-weight: 400;
   padding: 20px;
+}
+
+.slider {
+  width: 20%;
+  padding: 10px;
 }

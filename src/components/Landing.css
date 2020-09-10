@@ -6,12 +6,13 @@
   width: 100%;
   height: 100%;
   background-color: #ffb6ca;
-  scroll-snap-align: start;
+  scroll-snap-align: start end;
 }
 
 .landing__links {
   margin: 0 auto;
   width: 600px;
+  text-align: center;
   display: flex;
   justify-content: center;
   animation: buttons 6s ease forwards;
@@ -44,7 +45,7 @@
 /*LOGO*/
 
 #logo {
-  width: 500px;
+  width: 600px;
   object-fit: contain;
 }
 

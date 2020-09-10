@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Landing from "./components/Landing";
 import Gifts from "./components/Gifts";
-import Prints from "./components/Prints";
 import Info from "./components/Info";
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
             <Route path="/">
               <Landing />
               <Gifts />
-              <Prints />
               <Info />
             </Route>
           </Switch>

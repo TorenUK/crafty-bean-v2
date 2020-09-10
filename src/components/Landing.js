@@ -1,7 +1,6 @@
 import React from "react";
 import "./Landing.css";
 import Button from "@material-ui/core/Button";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function Landing() {
   return (
@@ -75,7 +74,7 @@ function Landing() {
         </div>
         <div className="landing__links__button">
           <Button href="#prints" size="small" variant="outlined">
-            Seed Bomb Prints
+            Seed Bomb Cards
           </Button>
         </div>
       </div>
@@ -84,17 +83,3 @@ function Landing() {
 }
 
 export default Landing;
-
-const SmoothScroll = () => (
-  <div>
-    <AnchorLink href="#things">Things</AnchorLink>
-    <AnchorLink href="#stuff">Stuff</AnchorLink>
-
-    <section id="things">
-      <h2>Things</h2>
-    </section>
-    <section id="stuff">
-      <h2>Stuff</h2>
-    </section>
-  </div>
-);

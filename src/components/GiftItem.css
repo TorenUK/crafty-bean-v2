@@ -1,18 +1,23 @@
 .giftItem {
-  margin: 45px;
-  padding: 15px;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.75);
-  border-radius: 5px;
+  box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.75);
+  border-radius: 25px;
+  margin: 15px 30px;
+  background-color: white;
 }
 
-.giftItem > img {
-  object-fit: contain;
-  width: 250px;
-  cursor: pointer;
+.giftItem__slider {
+  max-width: 320px;
+  margin: 10px;
 }
 
-@media only screen and (max-width: 1024px) {
-  .giftItem > img {
-    width: 150px;
-  }
+.giftItem__slider > h2 {
+  font-weight: 400;
+}
+.giftItem__slider > h3 {
+  padding: 2px;
+}
+
+.giftItem__slider > p > span {
+  color: red;
+  font-weight: 500;
 }
