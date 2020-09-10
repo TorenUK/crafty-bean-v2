@@ -4,7 +4,8 @@ import Footer from "./Footer";
 
 function Info() {
   return (
-    <div className="info">
+    <div id="info" className="info">
+      this is the info page
       <Footer />
     </div>
   );

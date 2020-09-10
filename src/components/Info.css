@@ -2,7 +2,8 @@
   min-height: 100%;
   scroll-snap-align: start;
   text-align: center;
-  background-color: #ffb6ca;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

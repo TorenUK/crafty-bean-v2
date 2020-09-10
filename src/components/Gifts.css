@@ -1,19 +1,38 @@
 .gifts {
+  position: relative;
   scroll-snap-align: start;
-  min-height: 100vh;
+  min-height: 200vh;
   text-align: center;
-  background-image: linear-gradient(to top, #96fbc4, #f9f586);
+  background-image: linear-gradient(to bottom, #ffecd2, #ffb095);
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.gifts__text {
+  margin: 100px auto;
+  width: 90%;
+  height: 5vh;
+  display: flex;
   justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+}
+
+.gifts__text__section {
+  width: 30%;
+  padding: 20px;
+  border-bottom: solid 1px white;
 }
 
 .gifts__container {
   margin: 0 auto;
-  width: 85%;
+  height: fit-content;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .gifts > h1 {

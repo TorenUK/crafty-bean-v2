@@ -1,6 +1,7 @@
 import React from "react";
 import "./Landing.css";
 import Button from "@material-ui/core/Button";
+import FooterLinks from "./FooterLinks";
 
 function Landing() {
   return (
@@ -73,11 +74,12 @@ function Landing() {
           </Button>
         </div>
         <div className="landing__links__button">
-          <Button href="#prints" size="small" variant="outlined">
-            Seed Bomb Cards
+          <Button href="#info" size="small" variant="outlined">
+            Info
           </Button>
         </div>
       </div>
+      <FooterLinks />
     </div>
   );
 }

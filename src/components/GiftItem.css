@@ -1,23 +1,41 @@
 .giftItem {
   box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.75);
-  border-radius: 25px;
-  margin: 15px 30px;
-  background-color: white;
+  border-radius: 20px;
+  margin: 25px 40px;
+  background-image: linear-gradient(to bottom, #ffffff, #f3f3f3);
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
 }
 
 .giftItem__slider {
-  max-width: 320px;
+  max-width: 60%;
   margin: 10px;
 }
 
-.giftItem__slider > h2 {
-  font-weight: 400;
-}
-.giftItem__slider > h3 {
-  padding: 2px;
+.giftItem__text {
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.giftItem__slider > p > span {
+.giftItem__text > h2 {
+  font-weight: 400;
+}
+.giftItem__text > h3 {
+  padding: 2px;
+  text-decoration: underline;
+}
+
+.giftItem__text > p > span {
   color: red;
   font-weight: 500;
+}
+
+.giftItem > .giftItem__text > .MuiButton-root {
+  color: #f98d2a;
+  font-size: 12px;
 }
