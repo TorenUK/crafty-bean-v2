@@ -1,5 +1,5 @@
 .giftItem {
-  box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 25px -1px rgba(0, 0, 0, 0.75);
   border-radius: 20px;
   margin: 25px 40px;
   background-image: linear-gradient(to bottom, #ffffff, #f3f3f3);
@@ -9,7 +9,7 @@
 }
 
 .giftItem__slider {
-  max-width: 60%;
+  max-width: 65%;
   margin: 10px;
 }
 
@@ -27,12 +27,12 @@
 }
 .giftItem__text > h3 {
   padding: 2px;
-  text-decoration: underline;
 }
 
 .giftItem__text > p > span {
   color: red;
   font-weight: 500;
+  text-decoration: underline;
 }
 
 .giftItem > .giftItem__text > .MuiButton-root {
