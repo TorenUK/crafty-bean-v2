@@ -1,4 +1,15 @@
 .basket {
   height: 100%;
   width: 100%;
+  background-image: linear-gradient(to bottom, #ffecd2, #ffb095);
+  text-align: center;
+}
+
+.basket__div__empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0.8;
 }

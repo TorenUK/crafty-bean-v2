@@ -6,8 +6,24 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Button from "@material-ui/core/Button";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
+import { useStateValue } from "./StateProvider";
 
-function GiftItem({ name, price, image1, image2, image3 }) {
+function GiftItem({ id, name, price, image1, image2, image3 }) {
+  const [{ basket }, dispatch] = useStateValue();
+
+  const addToBasket = () => {
+    // dispatch some action to data layer
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id: id,
+        name: name,
+        price: price,
+        image: image1,
+      },
+    });
+  };
+
   return (
     <div className="giftItem">
       <div className="giftItem__slider">
@@ -36,7 +52,7 @@ function GiftItem({ name, price, image1, image2, image3 }) {
           <p>dispatch: 1-2 working days</p>
           <LocalShippingIcon />
         </div>
-        <Button variant="outlined" size="medium">
+        <Button onClick={addToBasket} variant="outlined" size="small">
           add to basket
         </Button>
       </div>

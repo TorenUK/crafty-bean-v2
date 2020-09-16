@@ -10,17 +10,17 @@ function FooterLinks() {
   return (
     <div className="footerLinks">
       <div className="footerLinks__link">
-        <Link>
+        <Link to="#">
           <InstagramIcon />
         </Link>
       </div>
       <div className="footerLinks__link">
-        <Link>
+        <Link to="#">
           <FacebookIcon />
         </Link>
       </div>
       <div className="footerLinks__link">
-        <Link>
+        <Link to="#">
           <MailOutlineIcon />
         </Link>
       </div>
