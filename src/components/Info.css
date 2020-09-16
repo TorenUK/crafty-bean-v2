@@ -5,18 +5,25 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   position: relative;
 }
 
-.info > h1 {
-  font-weight: 400;
-  padding: 20px;
+.info__section {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.slider {
-  width: 20%;
+.info__section__text {
+  width: 300px;
+  height: 150px;
+  box-shadow: 1px 1px 25px -1px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
   padding: 10px;
+  display: grid;
+  place-items: center;
 }

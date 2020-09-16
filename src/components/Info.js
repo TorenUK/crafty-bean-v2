@@ -5,7 +5,18 @@ import Footer from "./Footer";
 function Info() {
   return (
     <div id="info" className="info">
-      this is the info page
+      <div class="info__section">
+        <div class="info__section__text">
+          <p></p>
+        </div>
+        <div class="info__section__text">
+          <p></p>
+        </div>
+        <div class="info__section__text">
+          <p></p>
+        </div>
+      </div>
+      <div class="info__section">dummy text</div>
       <Footer />
     </div>
   );

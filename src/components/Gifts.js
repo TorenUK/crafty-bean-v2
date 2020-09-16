@@ -19,9 +19,11 @@ function Gifts() {
   return (
     <div id="gifts" className="gifts">
       <div className="gifts__container">
-        {items.map(({ name, images }) => (
+        {/* passing the data down to GiftItem.js */}
+        {items.map(({ name, price, images }) => (
           <GiftItem
             name={name}
+            price={price}
             image1={images[0]}
             image2={images[1]}
             image3={images[2]}

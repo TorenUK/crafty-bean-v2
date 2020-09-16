@@ -1,7 +1,7 @@
 .footerLinks {
   position: fixed;
   z-index: 100;
-  bottom: 35px;
+  bottom: 45px;
   left: 50%;
   height: 5%;
   width: 10%;
@@ -14,19 +14,24 @@
 
 .footerLinks__link {
   margin: 0 30px;
-  border-bottom: solid 1px white;
 }
 
-.footerLinks > .footerLinks__link > .MuiSvgIcon-root {
-  font-size: 35px;
+.footerLinks > .footerLinks__link > a .MuiSvgIcon-root {
+  font-size: 27px;
   cursor: pointer;
-  opacity: 0.8;
-}
-.footerLinks > .footerLinks__link > .MuiSvgIcon-root:hover {
-  font-size: 50px;
-  opacity: 1;
+  opacity: 0.6;
+  transition: 0.3s;
 }
 
+.footerLinks > .footerLinks__link > a .MuiSvgIcon-root:hover {
+  opacity: 1;
+  font-size: 30px;
+}
+
+.footerLinks > .footerLinks__link > a {
+  border-bottom: solid 1px white;
+  padding: 1px;
+}
 /*.footerLinks :nth-child(3) {
   display: flex;
   flex-direction: column;
