@@ -1,5 +1,6 @@
 import React from "react";
 import "./Basket.css";
+import Subtotal from "./Subtotal";
 import BasketItem from "./BasketItem";
 import HomeLogo from "./HomeLogo";
 import { Link } from "react-router-dom";
@@ -20,16 +21,21 @@ function Basket() {
           <h2 className="basket__title__empty">your basket is empty</h2>
         </div>
       ) : (
-        <div>
-          <h2>your shopping basket: {basket?.length} item(s)</h2>
-          {basket?.map((item) => (
-            <BasketItem
-              id={item.id}
-              name={item.name}
-              price={item.price}
-              image={item.image}
-            />
-          ))}
+        <div className="basket__container">
+          <h2 className="basket__container__title">
+            your shopping basket: {basket?.length} item(s)
+          </h2>
+          <div className="basket__container__div">
+            {basket?.map((item) => (
+              <BasketItem
+                id={item.id}
+                name={item.name}
+                price={item.price}
+                image={item.image}
+              />
+            ))}
+          </div>
+          <Subtotal />
         </div>
       )}
       <Link to="/">

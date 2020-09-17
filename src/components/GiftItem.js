@@ -12,6 +12,8 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
   const [{ basket }, dispatch] = useStateValue();
 
   const addToBasket = () => {
+    alert(`1 ${name} added to basket`);
+
     // dispatch some action to data layer
     dispatch({
       type: "ADD_TO_BASKET",
