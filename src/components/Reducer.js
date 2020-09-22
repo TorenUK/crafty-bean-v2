@@ -13,15 +13,24 @@ const reducer = (state, action) => {
     }
 
     case "REMOVE_FROM_BASKET": {
-      // if item id is not equal to action id, it will return true.
+      let newBasket = [...state.basket];
 
-      // if they are the same, it will return false and remove the item with that id.
+      const index = state.basket.findIndex(
+        (basketItem) => basketItem.id === action.id
+      );
 
-      // then returns the new filtered array.
+      if (index >= 0) {
+        // item exists in basket -- remove it.
+        newBasket.splice(index, 1);
+      } else {
+        console.warn(
+          `cannot remove item: ${action.id} as it is not in basket.`
+        );
+      }
 
       return {
         ...state,
-        basket: [...state.basket.filter((item) => item.id != action.id)],
+        basket: newBasket,
       };
     }
 

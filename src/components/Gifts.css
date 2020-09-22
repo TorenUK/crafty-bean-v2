@@ -7,26 +7,22 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.gifts > h1 {
+  padding: 20px;
+  font-weight: 400;
 }
 
 .gifts__container {
-  margin: 0 auto;
+  margin: 20px auto;
   height: fit-content;
   width: 90%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   border-top: solid 1px white;
   border-bottom: solid 1px white;
-}
-
-.gifts > h1 {
-  width: fit-content;
-  margin: 0 auto;
-  margin-bottom: 45px;
-  font-size: 40px;
-  font-weight: 400;
 }
 
 @media only screen and (max-width: 1024px) {
