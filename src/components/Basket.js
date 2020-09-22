@@ -10,7 +10,7 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 function Basket() {
   const [{ basket }] = useStateValue();
 
-  console.log("the basket -->", basket);
+  console.log("the basket array -->", basket);
 
   return (
     <div className="basket">

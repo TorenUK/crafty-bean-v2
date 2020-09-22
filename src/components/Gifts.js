@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Gifts.css";
 import GiftItem from "./GiftItem";
 import database from "./firebase";
+import uuid from "react-uuid";
 import { useStateValue } from "./StateProvider";
 
 function Gifts() {
@@ -23,7 +24,7 @@ function Gifts() {
         {/* passing the data down to GiftItem.js */}
         {items.map(({ name, price, images }) => (
           <GiftItem
-            id={Math.random()}
+            id={uuid()}
             name={name}
             price={price}
             image1={images[0]}
