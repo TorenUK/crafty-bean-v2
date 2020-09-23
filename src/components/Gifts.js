@@ -4,7 +4,6 @@ import GiftItem from "./GiftItem";
 import FooterLinks from "./FooterLinks";
 import database from "./firebase";
 import uuid from "react-uuid";
-import { useStateValue } from "./StateProvider";
 
 function Gifts() {
   const [items, setItems] = useState([]);

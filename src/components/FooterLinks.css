@@ -25,6 +25,7 @@
   color: red;
   font-size: 18px;
   font-weight: 600;
+  margin: 5px;
 }
 
 .footerLinks > .footerLinks__link > a {

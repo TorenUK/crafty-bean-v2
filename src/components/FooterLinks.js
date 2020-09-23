@@ -31,7 +31,7 @@ function FooterLinks() {
       <div className="footerLinks__link">
         <Link to="/basket">
           <ShoppingBasketIcon />
-          {basket?.length !== 0 ? <span>{basket?.length}</span> : <span></span>}
+          {basket?.length !== 0 ? <span>{basket?.length}</span> : null}
         </Link>
       </div>
     </div>
