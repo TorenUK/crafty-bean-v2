@@ -79,7 +79,9 @@ function Landing() {
           </Button>
         </div>
       </div>
-      <FooterLinks />
+      <div className="landing__nav">
+        <FooterLinks />
+      </div>
     </div>
   );
 }

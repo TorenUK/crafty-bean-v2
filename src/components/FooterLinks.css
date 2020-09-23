@@ -1,14 +1,7 @@
 .footerLinks {
-  position: fixed;
-  z-index: 100;
-  bottom: 35px;
-  left: 50%;
-  height: 5%;
-  width: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateX(-50%);
 }
 
 .footerLinks__link {
@@ -16,7 +9,7 @@
 }
 
 .footerLinks > .footerLinks__link > a .MuiSvgIcon-root {
-  font-size: 27px;
+  font-size: 28px;
   cursor: pointer;
   opacity: 0.6;
   transition: 0.3s;
@@ -28,14 +21,13 @@
   font-size: 30px;
 }
 
+.footerLinks > .footerLinks__link > a > span {
+  color: red;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .footerLinks > .footerLinks__link > a {
   border-bottom: solid 1px #065c3f;
   padding: 1px;
 }
-/*.footerLinks :nth-child(3) {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-*/

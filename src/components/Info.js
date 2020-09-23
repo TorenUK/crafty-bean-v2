@@ -1,6 +1,6 @@
 import React from "react";
 import "./Info.css";
-import Footer from "./Footer";
+import FooterLinks from "./FooterLinks";
 import Button from "@material-ui/core/Button";
 
 function Info() {
@@ -8,7 +8,7 @@ function Info() {
     <div id="info" className="info">
       <div className="info__top-row">
         <div className="info__top__segment">
-          <h3>what is a seed bomb card?</h3>
+          <h2>what is a seed bomb card?</h2>
           <p>
             Our seed bomb cards are fun and unique geeeting cards. They’re A6
             size and come with a ‘seed bomb’ attatched so that the recipient can
@@ -31,20 +31,22 @@ function Info() {
         <div className="info__middle__segment">info</div>
         <div className="info__middle__segment">info</div>
         <div className="info__middle__segment">info</div>
+        <div className="info__middle__segment">info</div>
+        <div className="info__middle__segment">info</div>
+        <div className="info__middle__segment">info</div>
       </div>
       <div className="info__bottom-row">
         <div className="info__bottom__segment">
-          <h2>Subscribe for 10% off your first order</h2>
+          <div className="info__bottom__segment__logo">
+            <img src="CraftyBean.png" />
+          </div>
         </div>
         <div className="info__bottom__segment">
-          <input type="text" placeholder="enter your email"></input>
+          <div className="info__bottom__segment__nav">
+            <FooterLinks />
+          </div>
         </div>
-        <Button size="small" variant="outlined">
-          Subscribe now
-        </Button>
       </div>
-
-      <Footer />
     </div>
   );
 }

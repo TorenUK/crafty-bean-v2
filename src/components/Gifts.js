@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Gifts.css";
 import GiftItem from "./GiftItem";
+import FooterLinks from "./FooterLinks";
 import database from "./firebase";
 import uuid from "react-uuid";
 import { useStateValue } from "./StateProvider";
@@ -32,6 +33,12 @@ function Gifts() {
             image3={images[2]}
           />
         ))}
+      </div>
+      <div className="gifts__logo">
+        <img src="CraftyBean.png" />
+      </div>
+      <div className="gifts__nav">
+        <FooterLinks />
       </div>
     </div>
   );

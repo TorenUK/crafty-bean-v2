@@ -21,8 +21,29 @@
   width: 90%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   border-top: solid 1px white;
   border-bottom: solid 1px white;
+}
+
+.gifts > .gifts__nav {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gifts > .gifts__logo {
+  width: fit-content;
+  height: fit-content;
+  margin: 10px auto 0;
+}
+
+.gifts > .gifts__logo > img {
+  object-fit: contain;
+  width: 230px;
 }
 
 @media only screen and (max-width: 1024px) {
