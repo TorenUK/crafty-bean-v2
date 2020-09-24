@@ -3,3 +3,9 @@
   width: 300px;
   height: 100px;
 }
+
+.subtotal > a > .MuiButtonBase-root {
+  background-color: #f98d2a;
+  font-size: 12px;
+  margin: 10px;
+}

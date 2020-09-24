@@ -6,6 +6,12 @@ import Gifts from "./components/Gifts";
 import Info from "./components/Info";
 import Basket from "./components/Basket";
 import Payment from "./components/Payments";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+const promise = loadStripe(
+  "pk_test_51HCr8zGrO8LMr0aUXQ0OQTnN3yG2EZOvmnm5zs01TjUVekfhGgS3b0WL7BeDxqV97ikJ7DqJR5qaFknoFIx7pnhu00rn1llTud"
+);
 
 function App() {
   return (
@@ -15,7 +21,9 @@ function App() {
         <div className="app__body">
           <Switch>
             <Route path="/payment">
-              <Payment />
+              <Elements stripe={promise}>
+                <Payment />
+              </Elements>
             </Route>
             <Route path="/basket">
               <Basket />
