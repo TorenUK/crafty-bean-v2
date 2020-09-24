@@ -1,7 +1,6 @@
 import React from "react";
 import "./Info.css";
 import FooterLinks from "./FooterLinks";
-import Button from "@material-ui/core/Button";
 
 function Info() {
   return (
@@ -28,12 +27,21 @@ function Info() {
         </div>
       </div>
       <div className="info__middle-row">
-        <div className="info__middle__segment">info</div>
-        <div className="info__middle__segment">info</div>
-        <div className="info__middle__segment">info</div>
-        <div className="info__middle__segment">info</div>
-        <div className="info__middle__segment">info</div>
-        <div className="info__middle__segment">info</div>
+        <div className="info__middle__segment">
+          <h2>coming soon:</h2>
+          <h3>handmade planters</h3>
+          <h3>seed bomb prints</h3>
+        </div>
+        <div className="info__middle__segment"></div>
+        <div className="info__middle__segment"></div>
+        <div className="info__middle__segment"></div>
+        <div className="info__middle__segment"></div>
+        <div className="info__middle__segment">
+          {" "}
+          <h3>
+            <span> FREE </span>delivery on all UK orders
+          </h3>
+        </div>
       </div>
       <div className="info__bottom-row">
         <div className="info__bottom__segment">

@@ -33,9 +33,11 @@ function Gifts() {
           />
         ))}
       </div>
+
       <div className="gifts__logo">
         <img src="CraftyBean.png" />
       </div>
+
       <div className="gifts__nav">
         <FooterLinks />
       </div>
