@@ -5,6 +5,7 @@ import Landing from "./components/Landing";
 import Gifts from "./components/Gifts";
 import Info from "./components/Info";
 import Basket from "./components/Basket";
+import Payment from "./components/Payments";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
       <div className="app">
         <div className="app__body">
           <Switch>
+            <Route path="/payment">
+              <Payment />
+            </Route>
             <Route path="/basket">
               <Basket />
             </Route>
