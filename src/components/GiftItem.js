@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Modal from "./Modal";
 import "./GiftItem.css";
 import "react-slideshow-image/dist/styles.css";
 import { Carousel } from "react-responsive-carousel";
