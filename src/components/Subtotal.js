@@ -3,11 +3,12 @@ import "./Subtotal.css";
 import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "./StateProvider";
 import { getBasketTotal } from "./Reducer";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 
 function Subtotal() {
   const [{ basket }] = useStateValue();
+  const history = useHistory();
 
   return (
     <div className="subtotal">

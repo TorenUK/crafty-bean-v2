@@ -23,8 +23,6 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
         image: image1,
       },
     });
-
-    alert("added to basket");
   };
 
   return (
