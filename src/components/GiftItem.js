@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./GiftItem.css";
 import "react-slideshow-image/dist/styles.css";
 import { Carousel } from "react-responsive-carousel";
@@ -7,6 +7,7 @@ import Button from "@material-ui/core/Button";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 import { useStateValue } from "./StateProvider";
+import { toast, ToastContainer } from "react-toastify";
 
 function GiftItem({ id, name, price, image1, image2, image3 }) {
   const [{ basket }, dispatch] = useStateValue();
@@ -22,6 +23,8 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
         image: image1,
       },
     });
+
+    alert("added to basket");
   };
 
   return (
@@ -42,6 +45,7 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
         </Carousel>
       </div>
       <div className="giftItem__text">
+        <ToastContainer />
         <h4>{name}</h4>
         <h4>£{price}</h4>
         <div>
