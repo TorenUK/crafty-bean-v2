@@ -51,15 +51,24 @@
     margin: 25px 10px;
   }
 
+  .giftItem__text__para {
+    font-size: 14px;
+  }
+
+  .giftItem > p {
+    font-size: 25px;
+  }
+
   .giftItem__slider {
     max-width: 65%;
     margin: 5px;
   }
 
   .giftItem > .giftItem__text > .MuiButton-root {
-    font-size: 10px;
-    line-height: 10px;
     height: 25px;
     margin-bottom: 3px;
+
+    font-size: 10px;
+    line-height: 10px;
   }
 }

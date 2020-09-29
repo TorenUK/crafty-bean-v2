@@ -1,24 +1,21 @@
 .gifts {
+  min-height: 100vh;
   position: relative;
   scroll-snap-align: start;
-  min-height: 100vh;
   text-align: center;
-  background-image: linear-gradient(to bottom, #ffecd2, #ffb095);
+
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-start;
-}
 
-.gifts > h1 {
-  padding: 20px;
-  font-weight: 400;
+  background-image: linear-gradient(to bottom, #ffecd2, #ffb095);
 }
 
 .gifts__container {
   margin: 20px auto;
   height: fit-content;
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -27,7 +24,7 @@
 }
 
 .gifts > .gifts__nav {
-  margin-top: 80px;
+  margin-top: 10px;
   margin-bottom: 20px;
   height: fit-content;
   display: flex;

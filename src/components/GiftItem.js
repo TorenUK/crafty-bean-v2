@@ -47,11 +47,11 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
         <h4>{name}</h4>
         <h4>£{price}</h4>
         <div>
-          <p>handmade</p>
+          <p className="giftItem__text__para">handmade</p>
           <FavoriteBorderIcon />
         </div>
         <div>
-          <p>dispatch: 1-2 working days</p>
+          <p className="giftItem__text__para">dispatch: 1-2 working days</p>
           <LocalShippingIcon />
         </div>
         <Button onClick={addToBasket} variant="outlined" size="small">
