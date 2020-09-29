@@ -58,3 +58,52 @@
   font-size: 25px;
   cursor: pointer;
 }
+
+/*  MEDIA QUERIES */
+
+/* LAPTOP  */
+
+/* IPHONE X  */
+
+@media only screen and (max-width: 400px) {
+  .basketItem {
+    max-width: 300px;
+    margin: 20px 0;
+
+    border-right: none;
+    border-bottom: 1px solid white;
+  }
+
+  .basketItem > img {
+    object-fit: contain;
+    max-width: 150px;
+  }
+
+  .basketItem__info {
+    height: 50%;
+    margin: 10px;
+    font-size: 15px;
+  }
+
+  .basketItem__info > .basketItem__customize {
+    height: 20%;
+    width: 50%;
+    margin: 35px;
+  }
+
+  .basketItem__info > .basketItem__customize > h4 {
+    border-bottom: none;
+  }
+
+  .basketItem__info > .basketItem__customize > .MuiSvgIcon-root {
+    font-size: 25px;
+  }
+
+  .basketItem__info > .basketItem__remove {
+    margin-top: 15px;
+  }
+
+  .basketItem__info > .basketItem__remove > .MuiSvgIcon-root {
+    font-size: 25px;
+  }
+}

@@ -1,8 +1,8 @@
 .giftItem {
-  max-width: 470px;
+  max-width: 420px;
   box-shadow: 1px 1px 25px -1px rgba(0, 0, 0, 0.75);
   border-radius: 20px;
-  margin: 25px 40px;
+  margin: 25px 70px;
   background-image: linear-gradient(to bottom, #ffffff, #f3f3f3);
   display: flex;
   justify-content: center;
@@ -42,6 +42,19 @@
 
 /* MEDIA QUERIES */
 
+/* LAPTOP  */
+
+@media only screen and (max-width: 1940px) {
+  .giftItem {
+    max-width: 400px;
+    margin: 35px;
+  }
+
+  .giftItem__text__para {
+    font-size: 14px;
+  }
+}
+
 /* IPHONE X */
 
 @media only screen and (max-width: 400px) {
@@ -53,10 +66,6 @@
 
   .giftItem__text__para {
     font-size: 14px;
-  }
-
-  .giftItem > p {
-    font-size: 25px;
   }
 
   .giftItem__slider {

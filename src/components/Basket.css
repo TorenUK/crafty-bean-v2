@@ -1,23 +1,28 @@
 .basket {
-  height: fit-content;
+  max-height: 100%;
   min-height: 100%;
   width: 100%;
+
+  overflow-y: scroll;
+
   background-image: linear-gradient(to bottom, #ffecd2, #ffb095);
   text-align: center;
 }
 
 .basket__container {
-  min-height: 100%;
-  max-height: 100;
+  min-height: 50%;
+  max-height: 50%;
 }
 
 .basket__container__div {
   margin: 0 auto;
   width: 90%;
   height: 50%;
+
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
   border-top: solid 1px white;
   border-bottom: solid 1px white;
 }
@@ -33,4 +38,13 @@
 
 .basket__container__title {
   padding: 40px;
+}
+
+/*  MEDIA QUERIES */
+
+/* LAPTOP  */
+
+/* IPHONE X  */
+
+@media only screen and (max-width: 400px) {
 }

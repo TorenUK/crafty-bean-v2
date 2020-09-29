@@ -5,10 +5,22 @@
 }
 
 html {
+  width: 100vw;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  -moz-overflow-x: hidden;
+  -webkit-overflow-x: hidden;
+  -ms-overflow-x: hidden;
+  -o-overflow-x: hidden;
 }
 
 body {
+  width: 100vw;
+  overflow-x: hidden;
+  -moz-overflow-x: hidden;
+  -webkit-overflow-x: hidden;
+  -ms-overflow-x: hidden;
+  -o-overflow-x: hidden;
   scroll-behavior: smooth;
   margin: 0;
   font-family: "Poppins", sans-serif;

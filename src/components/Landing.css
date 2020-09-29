@@ -8,6 +8,11 @@
   height: 100%;
   background-color: #ffb6ca;
   scroll-snap-align: start end;
+  overflow-x: hidden;
+  -moz-overflow-x: hidden;
+  -webkit-overflow-x: hidden;
+  -ms-overflow-x: hidden;
+  -o-overflow-x: hidden;
 }
 
 .landing > .landing__nav {
@@ -150,6 +155,11 @@
 /* IPHONE X  */
 
 @media only screen and (max-width: 400px) {
+  .landing {
+    width: 100vw;
+    height: 100vh;
+  }
+
   #logo {
     width: 300px;
   }

@@ -8,6 +8,11 @@ a {
   place-items: center;
   height: 100vh;
   background-color: white;
+  overflow-x: hidden;
+  -moz-overflow-x: hidden;
+  -webkit-overflow-x: hidden;
+  -ms-overflow-x: hidden;
+  -o-overflow-x: hidden;
 }
 
 .app__body {

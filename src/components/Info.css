@@ -1,5 +1,7 @@
 .info {
+  height: 100%;
   min-height: 100%;
+  max-height: 100%;
   width: 100%;
   margin: 0 auto;
   scroll-snap-align: start;
@@ -12,14 +14,21 @@
     "top-row"
     "middle-row"
     "bottom-row";
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+  -moz-overflow-x: hidden;
+  -webkit-overflow-x: hidden;
+  -ms-overflow-x: hidden;
+  -o-overflow-x: hidden;
 }
 
 .info > .info__top-row {
+  max-height: 100%;
   width: 100%;
   min-height: fit-content;
   grid-area: top-row;
   margin: 0 auto;
-  padding: 40px;
 
   display: flex;
   flex-wrap: wrap;
@@ -29,21 +38,23 @@
 
 .info > .info__middle-row {
   width: 100%;
-  min-height: fit-content;
+  max-height: 100%;
   grid-area: middle-row;
   margin: 0 auto;
 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 
   background-color: #ffb6ca;
 }
 
 .info > .info__bottom-row {
+  max-height: 100%;
+
   margin: 0 auto;
-  padding: 20px;
+
   width: 100%;
   grid-area: bottom-row;
 
@@ -56,8 +67,15 @@
 }
 
 .info__top__segment {
+  max-height: 100%;
   max-width: 600px;
   min-width: 350px;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .info__top__segment > p {
@@ -69,7 +87,7 @@
   min-width: 300px;
   max-height: 300px;
   height: 40%;
-  margin: 5px;
+  margin: 25px;
 
   background-color: white;
   text-align: center;
@@ -78,8 +96,8 @@
 .info__middle__segment > img {
   object-fit: contain;
   width: 100%;
-  min-height: 100%;
-  max-height: 100%;
+  min-height: 80%;
+  max-height: 80%;
 }
 
 .info__bottom__segment {
@@ -100,4 +118,71 @@
   width: fit-content;
   height: fit-content;
   margin-top: 30px;
+}
+
+/* LAPTOP */
+@media only screen and (max-width: 1940px) {
+  .info > .info__top-row :nth-child(2) {
+    display: none;
+  }
+  .info > .info__top-row :nth-child(3) {
+    display: none;
+  }
+
+  .info__bottom__segment > .info__bottom__segment__logo {
+    margin: 50px auto 0;
+  }
+}
+
+/* IPHONE X */
+
+@media only screen and (max-width: 400px) {
+  .info > .info__top-row {
+    width: 100vw;
+  }
+  .info > .info__top-row :nth-child(2) {
+    display: none;
+  }
+  .info > .info__top-row :nth-child(3) {
+    display: none;
+  }
+
+  .info > .info__middle-row {
+    width: 100vw;
+  }
+
+  .info > .info__middle-row :nth-child(3),
+  .info > .info__middle-row :nth-child(4),
+  .info > .info__middle-row :nth-child(5),
+  .info > .info__middle-row :nth-child(6) {
+    display: none;
+  }
+
+  .info__middle__segment {
+    max-width: 10%;
+    min-width: 200px;
+    max-height: 200px;
+    margin: 5px;
+  }
+
+  .info__middle__segment > img {
+    object-fit: contain;
+    width: 100%;
+    min-height: 70%;
+    max-height: 70%;
+  }
+
+  .info__bottom__segment > .info__bottom__segment__logo {
+    margin-top: 10px;
+  }
+
+  .info__bottom__segment > .info__bottom__segment__logo > img {
+    width: 200px;
+  }
+
+  .info__bottom__segment > .info__bottom__segment__nav {
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 10px;
+  }
 }
