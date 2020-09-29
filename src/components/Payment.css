@@ -10,14 +10,17 @@
 }
 
 .payment__container {
-  background-color: pink;
   width: 80%;
   height: 80%;
+
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+
+  border-radius: 5px;
+  background-color: pink;
 }
 
 .payment__address {
