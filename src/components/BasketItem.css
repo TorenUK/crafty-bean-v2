@@ -1,5 +1,5 @@
 .basketItem {
-  max-width: 400px;
+  max-width: 450px;
   margin: 20px 40px;
   display: flex;
   align-items: center;
@@ -15,14 +15,46 @@
 .basketItem__info {
   height: 100%;
   margin: 10px;
+
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.basketItem__info .MuiSvgIcon-root {
+.basketItem__info > .basketItem__customize {
+  height: 50%;
+  width: 100%;
+  margin: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: green;
+}
+
+.basketItem__info > .basketItem__customize > .MuiSvgIcon-root,
+.basketItem__info > .basketItem__customize > h4 {
+  cursor: pointer;
+}
+
+.basketItem__info > .basketItem__customize > h4 {
+  border-bottom: 1px solid white;
+}
+
+.basketItem__info > .basketItem__customize > .MuiSvgIcon-root {
+  font-size: 25px;
+}
+
+.basketItem__info > .basketItem__remove {
+  margin-top: 15px;
+}
+
+.basketItem__info > .basketItem__remove > .MuiSvgIcon-root {
   color: red;
-  font-size: 30px;
+  font-size: 25px;
   cursor: pointer;
 }

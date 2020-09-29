@@ -78,12 +78,6 @@ function Payment() {
       <div className="payment__container">
         <div className="payment__section">
           <div className="payment__title">
-            <h3>address</h3>
-          </div>
-          <div className="payment__address">123 lane uk</div>
-        </div>
-        <div className="payment__section">
-          <div className="payment__title">
             <h3>review items</h3>
           </div>
           <div className="payment__items">
@@ -99,7 +93,7 @@ function Payment() {
         </div>
         <div className="payment__method">
           <div className="payment__title">
-            <h3>payment method</h3>
+            <h3>payment</h3>
           </div>
           <div className="payment__details">
             <form onSubmit={handleSubmit}>
