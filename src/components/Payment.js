@@ -8,6 +8,7 @@ import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "./Reducer";
 import axios from "./axios";
 import db from "./firebase";
+import { v4 as uuidv4 } from "uuid";
 
 function Payment() {
   const [{ basket }, dispatch] = useStateValue();
@@ -25,6 +26,8 @@ function Payment() {
   const [error, setError] = useState(null);
   const [disabled, setDisabled] = useState(true);
 
+  const [customerId, setCustomerId] = useState("");
+
   useEffect(() => {
     // generate client secret every time basket amount changes
 
@@ -38,6 +41,7 @@ function Payment() {
     };
 
     getClientSecret();
+    setCustomerId(uuidv4());
   }, [basket]);
 
   const handleSubmit = async (e) => {
@@ -98,6 +102,8 @@ function Payment() {
                 name={item.name}
                 image={item.image}
                 price={item.price}
+                hideButton
+                hideCustomize
               />
             ))}
           </div>

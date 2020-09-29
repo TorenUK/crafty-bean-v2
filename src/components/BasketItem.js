@@ -7,7 +7,7 @@ import { useStateValue } from "./StateProvider";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 import CreateIcon from "@material-ui/icons/Create";
 
-function BasketItem({ id, name, price, image }) {
+function BasketItem({ id, name, price, image, hideButton, hideCustomize }) {
   const [{ basket }, dispatch] = useStateValue();
 
   const removeFromBasket = () => {
@@ -23,16 +23,23 @@ function BasketItem({ id, name, price, image }) {
       <img src={image} />
       <div className="basketItem__info">
         <h4>{name}</h4>
-        <div className="basketItem__customize">
-          {" "}
-          <CreateIcon />
-          <h4>customize gift</h4>
-        </div>
+        {!hideCustomize && (
+          <div className="basketItem__customize">
+            {" "}
+            <CreateIcon />
+            <h4>customize gift</h4>
+          </div>
+        )}
+
         <h3>£{price}</h3>
-        <div className="basketItem__remove">
-          <HighlightOffIcon onClick={removeFromBasket} />
-          <h5>remove from basket</h5>
-        </div>
+        {/* ONLY SHOW THIS BUTTON IN BASKET 
+        IF hideButton IS TRUE HIDE THE BUTTON*/}
+        {!hideButton && (
+          <div className="basketItem__remove">
+            <HighlightOffIcon onClick={removeFromBasket} />
+            <h5>remove from basket</h5>
+          </div>
+        )}
       </div>
     </div>
   );
