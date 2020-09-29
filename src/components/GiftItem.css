@@ -39,3 +39,27 @@
   background-color: #f98d2a;
   font-size: 11px;
 }
+
+/* MEDIA QUERIES */
+
+/* IPHONE X */
+
+@media only screen and (max-width: 400px) {
+  .giftItem {
+    max-width: 340px;
+    border-radius: 5px;
+    margin: 25px 10px;
+  }
+
+  .giftItem__slider {
+    max-width: 65%;
+    margin: 5px;
+  }
+
+  .giftItem > .giftItem__text > .MuiButton-root {
+    font-size: 10px;
+    line-height: 10px;
+    height: 25px;
+    margin-bottom: 3px;
+  }
+}

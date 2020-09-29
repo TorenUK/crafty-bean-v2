@@ -7,6 +7,7 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "./Reducer";
 import axios from "./axios";
+import db from "./firebase";
 
 function Payment() {
   const [{ basket }, dispatch] = useStateValue();
@@ -25,7 +26,7 @@ function Payment() {
   const [disabled, setDisabled] = useState(true);
 
   useEffect(() => {
-    // generate client secret every time basket changes
+    // generate client secret every time basket amount changes
 
     const getClientSecret = async () => {
       const response = await axios({
@@ -38,8 +39,6 @@ function Payment() {
 
     getClientSecret();
   }, [basket]);
-
-  console.log("THE CLIENT SECRET IS ----->>>>>>", clientSecret);
 
   const handleSubmit = async (e) => {
     //stipe stuff
@@ -55,6 +54,15 @@ function Payment() {
       .then(({ paymentIntent }) => {
         // paymentIntent = the payment confirmation.
 
+        // pushing order confirmation to firestore
+
+        db.collection("orders").doc(paymentIntent.id).set({
+          basket: basket,
+          amount: paymentIntent.amount,
+          created: paymentIntent.created,
+        });
+
+        // empty the basket in the data layer
         dispatch({
           type: "EMPTY_BASKET",
         });
@@ -62,6 +70,9 @@ function Payment() {
         setSucceeded(true);
         setError(null);
         setProcessing(false);
+
+        // user gets pushed to orders page
+        history.replace("/orders");
       });
   };
 
