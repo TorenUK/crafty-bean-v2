@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Landing.css";
 import Button from "@material-ui/core/Button";
 import FooterLinks from "./FooterLinks";

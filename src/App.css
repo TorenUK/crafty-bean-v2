@@ -17,6 +17,7 @@ a {
   box-shadow: -1px 4px 20px 1px rgba(0, 0, 0, 0.75);
   scroll-snap-type: y;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .app__body::-webkit-scrollbar {
