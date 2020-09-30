@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Basket.css";
 import Subtotal from "./Subtotal";
 import BasketItem from "./BasketItem";

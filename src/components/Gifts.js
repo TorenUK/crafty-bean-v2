@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
+
+//components
 import "./Gifts.css";
 import GiftItem from "./GiftItem";
 import FooterLinks from "./FooterLinks";
 import database from "./firebase";
+import BasketNotify from "./BasketNotify";
+
 import uuid from "react-uuid";
+import { useStateValue } from "./StateProvider";
 
 function Gifts() {
   const [items, setItems] = useState([]);
-
+  const [{ basket }] = useStateValue();
   //run everytime component loads:
 
   useEffect(() => {
@@ -20,6 +25,11 @@ function Gifts() {
 
   return (
     <div id="gifts" className="gifts">
+      <div className="gifts__top">
+        <div className="gifts__top__section">SOME SORT OF INFO HERE</div>
+        <div className="gifts__top__section">SOME SORT OF INFO HERE</div>
+        <div className="gifts__top__section">SOME SORT OF INFO HERE</div>
+      </div>
       <div className="gifts__container">
         {/* passing the data down to GiftItem.js */}
         {items.map(({ name, price, images }) => (
@@ -40,6 +50,9 @@ function Gifts() {
 
       <div className="gifts__nav">
         <FooterLinks />
+      </div>
+      <div className="gifts__notify">
+        {basket?.length > 0 ? <BasketNotify /> : null}
       </div>
     </div>
   );

@@ -18,6 +18,14 @@
   -o-overflow-x: hidden;
 }
 
+.gifts__top {
+  height: 150px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .gifts__container {
   margin: 20px auto;
   height: fit-content;

@@ -1,0 +1,51 @@
+.basketNotify {
+  position: fixed;
+  bottom: 70px;
+  left: 80px;
+
+  width: 90px;
+  height: 70px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: green;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.basketNotify > span {
+  font-size: 16px;
+  font-weight: 500;
+}
+.basketNotify > a {
+  color: green;
+  width: 100%;
+}
+.basketNotify:hover {
+  transform: scale(1.1);
+}
+
+/* MEDIA QUERIES */
+
+/* LAPTOP */
+
+@media only screen and (max-width: 1400px) {
+}
+
+/* IPHONE X */
+
+@media only screen and (max-width: 400px) {
+  .basketNotify {
+    width: 60px;
+    height: 58px;
+
+    bottom: 50px;
+    left: 20px;
+  }
+}
