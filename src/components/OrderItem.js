@@ -1,16 +1,25 @@
 import React from "react";
+
+//components
 import "./Order.css";
-import moment from "moment";
 import BasketItem from "./BasketItem";
+
+import moment from "moment";
+
+//material ui
+import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 
 function OrderItem({ order }) {
   return (
-    <div className="order">
-      <h2>order</h2>
-      <p>{moment.unix(order.data.created).format("MMMM Do YYYY, h:mma")}</p>
+    <div className="orders">
+      <p>
+        order date: {moment.unix(order.data.created).format("MMMM Do YYYY")}
+      </p>
       <p className="orderItem__id">
         <small>order id: {order.id}</small>
       </p>
+      <LocalShippingIcon />
+      dispatch: 1-2 working days
       {order.data.basket?.map((item) => (
         <BasketItem
           id={item.id}

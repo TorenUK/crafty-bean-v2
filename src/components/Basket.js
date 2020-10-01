@@ -1,11 +1,17 @@
 import React, { useEffect } from "react";
+
+//components
 import "./Basket.css";
 import Subtotal from "./Subtotal";
 import BasketItem from "./BasketItem";
 import HomeLogo from "./HomeLogo";
+
+//material ui
+import CreateIcon from "@material-ui/icons/Create";
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
-import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
 function Basket() {
   const [{ basket }] = useStateValue();
@@ -33,6 +39,18 @@ function Basket() {
                 price={item.price}
                 image={item.image}
               />
+            ))}
+          </div>
+          <CreateIcon />
+          <p>customize {basket?.length} item(s)</p>
+          <div className="basket__input__container">
+            {basket.map((item) => (
+              <div className="basket__input">
+                <h3>{item.name}</h3>
+                <form>
+                  <textarea placeholder="your text here"></textarea>
+                </form>
+              </div>
             ))}
           </div>
           <Subtotal />

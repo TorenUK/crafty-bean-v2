@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+
 import "./BasketItem.css";
 
 import { useStateValue } from "./StateProvider";
@@ -10,6 +11,10 @@ import CreateIcon from "@material-ui/icons/Create";
 function BasketItem({ id, name, price, image, hideButton, hideCustomize }) {
   const [{ basket }, dispatch] = useStateValue();
 
+  // customized modal input
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalInput, setModalInput] = useState("");
+
   const removeFromBasket = () => {
     dispatch({
       type: "REMOVE_FROM_BASKET",
@@ -17,17 +22,45 @@ function BasketItem({ id, name, price, image, hideButton, hideCustomize }) {
     });
   };
 
+  const sendInput = () => {
+    console.log();
+  };
+
   return (
     <div className="basketItem">
-      <div className="basketItem__image"></div>
       <img src={image} />
+
       <div className="basketItem__info">
         <h4>{name}</h4>
         {!hideCustomize && (
           <div className="basketItem__customize">
             {" "}
             <CreateIcon />
-            <h4>customize gift</h4>
+            <h4 onClick={() => setIsOpen(!isOpen)}>customize this gift</h4>
+            {/* GET THE USERS CUSTOM INPUT AND STORE IT IN STATE */}
+            <div className="modal__container">
+              {isOpen ? (
+                <div className="modal">
+                  <form onSubmit={sendInput()}>
+                    <div className="modal__middle">
+                      <textarea
+                        onChange={(e) => {
+                          setModalInput(e.target.value);
+                        }}
+                        onBlur={(e) => {
+                          setModalInput(e.target.value);
+                          setIsOpen(!isOpen);
+                          console.log(`${name}`, modalInput);
+                        }}
+                        placeholder="your text here..."
+                      >
+                        {modalInput}
+                      </textarea>
+                    </div>
+                  </form>
+                </div>
+              ) : null}
+            </div>
           </div>
         )}
 

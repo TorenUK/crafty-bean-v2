@@ -1,4 +1,5 @@
 .basketItem {
+  position: relative;
   max-width: 450px;
   margin: 20px 40px;
   padding: 5px;
@@ -36,6 +37,29 @@
   align-items: center;
 
   color: green;
+}
+
+.modal__container {
+  width: 100%;
+  height: 100%;
+}
+
+.modal__middle {
+  height: 100%;
+}
+
+.modal__middle > textarea {
+  width: 80%;
+  height: 150px;
+
+  border: 2px solid pink;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 13px;
+  resize: none;
+}
+.modal__container > .modal > form > input {
+  width: 100%;
 }
 
 .basketItem__info > .basketItem__customize > .MuiSvgIcon-root,

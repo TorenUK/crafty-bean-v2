@@ -26,6 +26,35 @@
   border-top: solid 1px white;
 }
 
+.basket > .basket__input__container > {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: red;
+}
+
+.basket__input__container {
+}
+
+.basket__input > form {
+  width: 25%;
+  height: 10vh;
+  margin: 0 auto;
+}
+
+.basket__input > form > textarea {
+  width: 100%;
+  height: 100%;
+
+  border: 2px solid pink;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  resize: none;
+}
+
 .basket__div__empty {
   position: absolute;
   top: 50%;
