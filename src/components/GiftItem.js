@@ -67,11 +67,10 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
               <CreateIcon />
               <h3>customise your gift</h3>
             </div>
-
+            {/* SETTING INPUT STATE TO USER INPUT */}
             <textarea
               onChange={(e) => {
                 setInput(e.target.value);
-                console.log(input);
               }}
               placeholder="enter your message..."
             ></textarea>
