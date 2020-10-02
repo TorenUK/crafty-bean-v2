@@ -36,8 +36,59 @@
 }
 
 .giftItem > .giftItem__text > .MuiButton-root {
-  background-color: #f98d2a;
+  color: white;
+  background-color: green;
   font-size: 11px;
+}
+
+/* WHEN CUSTOMER VIEWS ITEM */
+
+.giftItem__open {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+
+  height: 50vh;
+  width: 40vw;
+
+  display: flex;
+  justify-content: space-between;
+
+  background-color: white;
+  border: 3px solid orange;
+  border-radius: 15px;
+}
+
+.giftItem__open > form {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.giftItem__open > form > .giftItem__open__submit > .MuiButton-root {
+  margin: 15px;
+  background-color: orange;
+}
+
+.giftItem__open > form > .giftItem__open__close > .MuiButton-root {
+  background-color: red;
+}
+
+.giftItem__open > form > textarea {
+  width: 60%;
+  height: 50%;
+
+  font-size: 16px;
+}
+
+.giftItem__open > .giftItem__slider {
+  width: 50%;
+  margin: 5px;
 }
 
 /* MEDIA QUERIES */

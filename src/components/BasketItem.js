@@ -32,38 +32,6 @@ function BasketItem({ id, name, price, image, hideButton, hideCustomize }) {
 
       <div className="basketItem__info">
         <h4>{name}</h4>
-        {!hideCustomize && (
-          <div className="basketItem__customize">
-            {" "}
-            <CreateIcon />
-            <h4 onClick={() => setIsOpen(!isOpen)}>customize this gift</h4>
-            {/* GET THE USERS CUSTOM INPUT AND STORE IT IN STATE */}
-            <div className="modal__container">
-              {isOpen ? (
-                <div className="modal">
-                  <form onSubmit={sendInput()}>
-                    <div className="modal__middle">
-                      <textarea
-                        onChange={(e) => {
-                          setModalInput(e.target.value);
-                        }}
-                        onBlur={(e) => {
-                          setModalInput(e.target.value);
-                          setIsOpen(!isOpen);
-                          console.log(`${name}`, modalInput);
-                        }}
-                        placeholder="your text here..."
-                      >
-                        {modalInput}
-                      </textarea>
-                    </div>
-                  </form>
-                </div>
-              ) : null}
-            </div>
-          </div>
-        )}
-
         <h3>£{price}</h3>
         {/* ONLY SHOW THIS BUTTON IN BASKET 
         IF hideButton IS TRUE HIDE THE BUTTON*/}

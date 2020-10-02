@@ -41,18 +41,7 @@ function Basket() {
               />
             ))}
           </div>
-          <CreateIcon />
-          <p>customize {basket?.length} item(s)</p>
-          <div className="basket__input__container">
-            {basket.map((item) => (
-              <div className="basket__input">
-                <h3>{item.name}</h3>
-                <form>
-                  <textarea placeholder="your text here"></textarea>
-                </form>
-              </div>
-            ))}
-          </div>
+
           <Subtotal />
         </div>
       )}
