@@ -26,9 +26,20 @@ function Subtotal() {
         thousandSeparator={true}
         prefix={"£"}
       />
-      <Link to="/payment">
-        <Button variant="outlined">proceed to checkout</Button>
-      </Link>
+      <div className="subtotal__links">
+        <div>
+          <Link to="/payment">
+            <Button variant="outlined">proceed to checkout</Button>
+          </Link>
+        </div>
+        <div>
+          <Link to="/">
+            <Button size="small" variant="outlined">
+              Home
+            </Button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

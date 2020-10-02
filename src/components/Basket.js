@@ -15,8 +15,6 @@ import { useStateValue } from "./StateProvider";
 function Basket() {
   const [{ basket }] = useStateValue();
 
-  console.log("the basket array -->", basket);
-
   return (
     <div className="basket">
       {basket?.length === 0 ? (
@@ -45,9 +43,6 @@ function Basket() {
           <Subtotal />
         </div>
       )}
-      <Link to="/">
-        <HomeLogo />
-      </Link>
     </div>
   );
 }
