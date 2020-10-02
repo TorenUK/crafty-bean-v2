@@ -102,8 +102,8 @@ function Payment() {
                 name={item.name}
                 image={item.image}
                 price={item.price}
+                message={item.message}
                 hideButton
-                hideCustomize
               />
             ))}
           </div>

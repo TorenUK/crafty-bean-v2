@@ -10,6 +10,7 @@ import Basket from "./components/Basket";
 import Payment from "./components/Payment";
 import Orders from "./components/Orders";
 import ScrollToTop from "./components/ScrollToTop";
+import Email from "./components/Email";
 
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements, useElements } from "@stripe/react-stripe-js";
@@ -27,6 +28,9 @@ function App() {
         <div className="app">
           <div id="app__body" className="app__body">
             <Switch>
+              <Route path="/email">
+                <Email />
+              </Route>
               <Route path="/orders">
                 <Orders />
               </Route>

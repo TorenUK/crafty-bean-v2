@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+
+// components
 import "./Landing.css";
 import Button from "@material-ui/core/Button";
 import FooterLinks from "./FooterLinks";
-
-import { Link } from "react-router-dom";
 
 function Landing() {
   return (

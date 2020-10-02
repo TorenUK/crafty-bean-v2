@@ -21,6 +21,8 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
 
   const [clicked, setClicked] = useState(false);
 
+  const [input, setInput] = useState("");
+
   const addToBasket = () => {
     setClicked(!clicked);
     alert(` added ${name} to basket`);
@@ -33,12 +35,14 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
         name: name,
         price: price,
         image: image1,
+        message: input,
       },
     });
   };
 
   return (
     <div className="giftItem">
+      {/* RENDER IF USER CLICKS ON "VIEW" */}
       {clicked ? (
         <div className="giftItem__open">
           <div className="giftItem__slider">
@@ -58,9 +62,19 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
           </div>
 
           <form>
-            <CreateIcon />
-            <h3>customize your gift</h3>
-            <textarea placeholder="enter your message..."></textarea>
+            <div className="giftItem__open__title">
+              {" "}
+              <CreateIcon />
+              <h3>customise your gift</h3>
+            </div>
+
+            <textarea
+              onChange={(e) => {
+                setInput(e.target.value);
+                console.log(input);
+              }}
+              placeholder="enter your message..."
+            ></textarea>
             <div className="giftItem__open__submit">
               <Button size="large" onClick={addToBasket}>
                 add to basket
@@ -69,6 +83,7 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
             <div clasName="giftItem__open__close">
               {" "}
               <Button
+                variant="outlined"
                 size="small"
                 onClick={() => {
                   setClicked(!clicked);

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+
+// components
 import "./FooterLinks.css";
 
 // material ui
@@ -7,7 +9,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import { Link } from "react-router-dom";
 
-function FooterLinks() {
+function FooterLinks(emailOpen, setEmailOpen) {
   return (
     <div className="footerLinks">
       <div className="footerLinks__link">
@@ -21,7 +23,7 @@ function FooterLinks() {
         </Link>
       </div>
       <div className="footerLinks__link">
-        <Link to="#">
+        <Link to="/email">
           <MailOutlineIcon />
         </Link>
       </div>

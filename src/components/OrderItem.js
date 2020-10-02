@@ -26,6 +26,7 @@ function OrderItem({ order }) {
           name={item.name}
           image={item.image}
           price={item.price}
+          message={item.message}
           hideButton
           hideCustomize
         />

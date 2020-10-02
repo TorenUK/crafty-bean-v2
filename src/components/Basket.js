@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 //components
 import "./Basket.css";
@@ -7,7 +7,6 @@ import BasketItem from "./BasketItem";
 import HomeLogo from "./HomeLogo";
 
 //material ui
-import CreateIcon from "@material-ui/icons/Create";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
 import { Link } from "react-router-dom";
@@ -38,6 +37,7 @@ function Basket() {
                 name={item.name}
                 price={item.price}
                 image={item.image}
+                message={item.message}
               />
             ))}
           </div>

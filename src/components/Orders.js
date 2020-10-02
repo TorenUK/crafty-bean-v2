@@ -21,7 +21,7 @@ function Orders() {
 
   return (
     <div className="orders">
-      <h1>your orders</h1>
+      <h1>thanks for your order!</h1>
       <div className="orders__container">
         {orders?.map((order) => (
           <OrderItem order={order} />

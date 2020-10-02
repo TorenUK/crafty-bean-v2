@@ -6,14 +6,11 @@ import { useStateValue } from "./StateProvider";
 
 // material ui
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
-import CreateIcon from "@material-ui/icons/Create";
 
-function BasketItem({ id, name, price, image, hideButton, hideCustomize }) {
+function BasketItem({ id, name, price, image, message, hideButton }) {
   const [{ basket }, dispatch] = useStateValue();
 
   // customized modal input
-  const [isOpen, setIsOpen] = useState(false);
-  const [modalInput, setModalInput] = useState("");
 
   const removeFromBasket = () => {
     dispatch({
@@ -33,6 +30,8 @@ function BasketItem({ id, name, price, image, hideButton, hideCustomize }) {
       <div className="basketItem__info">
         <h4>{name}</h4>
         <h3>£{price}</h3>
+        <h5> your custom message: </h5>
+        <p>{message}</p>
         {/* ONLY SHOW THIS BUTTON IN BASKET 
         IF hideButton IS TRUE HIDE THE BUTTON*/}
         {!hideButton && (
