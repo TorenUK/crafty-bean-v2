@@ -42,6 +42,10 @@
   justify-content: center;
 }
 
+form > .stripe__element {
+  margin: 30px;
+}
+
 .payment__address > form > .submitButton {
   height: 50px;
   width: 40px;
@@ -58,7 +62,9 @@
 
 .payment__method {
   height: 20%;
-  width: 50%;
+  width: 40%;
+
+  margin: 10px;
 
   text-align: center;
 
@@ -70,4 +76,30 @@
 .payment__method > .payment__details {
   height: 100%;
   width: 100%;
+}
+
+/*  MEDIA QUERIES */
+
+/* LAPTOP  */
+
+/* IPHONE X  */
+
+@media only screen and (max-width: 400px) {
+  .payment__container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .payment__method {
+    height: 20%;
+    width: 90%;
+  }
+
+  .payment__priceContainer {
+    margin: 20px;
+  }
+
+  form > .stripe__element {
+    margin: 20px;
+  }
 }

@@ -141,8 +141,9 @@ function Payment() {
               <input type="text" placeholder="address"></input>
               <h4>postcode</h4>
               <input type="text" placeholder="postcode"></input>
-
-              <CardElement onChange={handleChange} />
+              <div className="stripe__element">
+                <CardElement onChange={handleChange} />
+              </div>
 
               <div className="payment__priceContainer">
                 <CurrencyFormat
