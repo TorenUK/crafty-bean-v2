@@ -9,12 +9,13 @@ import moment from "moment";
 //material ui
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 
-function OrderItem({ order }) {
+function OrderItem({ order, email }) {
   return (
     <div className="orders">
       <p>
         order date: {moment.unix(order.data.created).format("MMMM Do YYYY")}
       </p>
+      <p>email: {email}</p>
       <p className="orderItem__id">
         <small>order id: {order.id}</small>
       </p>

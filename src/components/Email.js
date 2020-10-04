@@ -6,7 +6,7 @@ import "./Email.css";
 function Email() {
   return (
     <div className="email">
-      <h1>email component</h1>
+      <h1>contact us</h1>
     </div>
   );
 }

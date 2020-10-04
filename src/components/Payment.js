@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+
+// components
 import BasketItem from "./BasketItem";
 import "./Payment.css";
+import axios from "./axios";
+import database from "./firebase";
+
+// functions etc
+import { getBasketTotal } from "./Reducer";
+import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "./StateProvider";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
-import CurrencyFormat from "react-currency-format";
-import { getBasketTotal } from "./Reducer";
-import axios from "./axios";
-import db from "./firebase";
-import { v4 as uuidv4 } from "uuid";
 
 function Payment() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, customer }, dispatch] = useStateValue();
 
   const history = useHistory();
 
@@ -26,7 +29,7 @@ function Payment() {
   const [error, setError] = useState(null);
   const [disabled, setDisabled] = useState(true);
 
-  const [customerId, setCustomerId] = useState("");
+  const [customerEmail, setCustomerEmail] = useState("");
 
   useEffect(() => {
     // generate client secret every time basket amount changes
@@ -41,7 +44,6 @@ function Payment() {
     };
 
     getClientSecret();
-    setCustomerId(uuidv4());
   }, [basket]);
 
   const handleSubmit = async (e) => {
@@ -60,13 +62,25 @@ function Payment() {
 
         // pushing order confirmation to firestore
 
-        db.collection("orders").doc(paymentIntent.id).set({
-          basket: basket,
-          amount: paymentIntent.amount,
-          created: paymentIntent.created,
+        // ADD CUSTOMER EMAIL TO DATA LAYER -- LATER USE THIS TO DISPLAY INDIVIDUAL ORDERS IN ORDERS.JS
+        dispatch({
+          type: "ADD_CUSTOMER",
+          customer: customerEmail,
         });
 
+        database
+          .collection("customers")
+          .doc(customerEmail)
+          .collection("orders")
+          .doc(paymentIntent.id)
+          .set({
+            basket: basket,
+            amount: paymentIntent.amount / 100,
+            created: paymentIntent.created,
+          });
+
         // empty the basket in the data layer
+
         dispatch({
           type: "EMPTY_BASKET",
         });
@@ -99,6 +113,7 @@ function Payment() {
             {basket.map((item) => (
               <BasketItem
                 id={item.id}
+                customerEmail={customerEmail}
                 name={item.name}
                 image={item.image}
                 price={item.price}
@@ -114,6 +129,19 @@ function Payment() {
           </div>
           <div className="payment__details">
             <form onSubmit={handleSubmit}>
+              <input
+                onChange={(e) => {
+                  setCustomerEmail(e.target.value);
+                }}
+                type="text"
+                placeholder="email"
+              ></input>
+              <h4>address</h4>
+
+              <input type="text" placeholder="address"></input>
+              <h4>postcode</h4>
+              <input type="text" placeholder="postcode"></input>
+
               <CardElement onChange={handleChange} />
 
               <div className="payment__priceContainer">
@@ -132,6 +160,7 @@ function Payment() {
                   thousandSeparator={true}
                   prefix={"£"}
                 />
+
                 <button disabled={processing || disabled || succeeded}>
                   <span>{processing ? <p>processing</p> : "pay now"}</span>
                 </button>

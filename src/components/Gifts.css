@@ -79,4 +79,9 @@
     object-fit: contain;
     width: 150px;
   }
+
+  .gifts__top :nth-child(1),
+  .gifts__top :nth-child(3) {
+    display: none;
+  }
 }

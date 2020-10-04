@@ -1,14 +1,24 @@
 import React, { useEffect, useState } from "react";
-import db from "./firebase";
+
+// components
+import database from "./firebase";
 import "./Orders.css";
 import OrderItem from "./OrderItem";
+
+import { useStateValue } from "./StateProvider";
 
 function Orders() {
   const [orders, setOrders] = useState([]);
 
+  const [{ basket, customer }, dispatch] = useStateValue();
+
+  // PASS USER ID (EMAIL) TO USE EFFECT TO DISPLAY INDIVIDUAL CUSTOMER ORDERS ON ORDER PAGE
+
   useEffect(() => {
-    db.collection("orders")
-      .orderBy("created", "desc")
+    database
+      .collection("customers")
+      .doc(customer)
+      .collection("orders")
       .onSnapshot((snapshot) =>
         setOrders(
           snapshot.docs.map((doc) => ({
@@ -17,14 +27,15 @@ function Orders() {
           }))
         )
       );
-  });
+  }, []);
 
+  console.log(orders);
   return (
     <div className="orders">
       <h1>thanks for your order!</h1>
       <div className="orders__container">
         {orders?.map((order) => (
-          <OrderItem order={order} />
+          <OrderItem order={order} email={customer} />
         ))}
       </div>
     </div>

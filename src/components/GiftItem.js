@@ -82,8 +82,7 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
             <div clasName="giftItem__open__close">
               {" "}
               <Button
-                variant="outlined"
-                size="small"
+                size="medium"
                 onClick={() => {
                   setClicked(!clicked);
                 }}
@@ -121,15 +120,31 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
           <p className="giftItem__text__para">dispatch: 1-2 working days</p>
           <LocalShippingIcon />
         </div>
-        <Button
-          onClick={() => {
-            setClicked(!clicked);
-          }}
-          variant="outlined"
-          size="small"
-        >
-          view
-        </Button>
+        <div className="giftItem__text__buttons">
+          <div>
+            <Button
+              onClick={() => {
+                setClicked(!clicked);
+              }}
+              variant="outlined"
+              size="small"
+            >
+              view
+            </Button>
+          </div>
+          <div>
+            <Button
+              onClick={() => {
+                setClicked(!clicked);
+              }}
+              variant="outlined"
+              size="small"
+            >
+              customise
+            </Button>
+          </div>
+        </div>
+
         {/* <Button onClick={addToBasket} variant="outlined" size="small">
           add to basket
         </Button> */}

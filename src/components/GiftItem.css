@@ -35,10 +35,30 @@
   text-decoration: underline;
 }
 
-.giftItem > .giftItem__text > .MuiButton-root {
+.giftItem
+  > .giftItem__text
+  > .giftItem__text__buttons
+  > :nth-child(1)
+  .MuiButton-root {
   color: white;
   background-color: green;
   font-size: 11px;
+}
+
+.giftItem
+  > .giftItem__text
+  > .giftItem__text__buttons
+  > :nth-child(2)
+  .MuiButton-root {
+  height: 25px;
+  margin-bottom: 3px;
+
+  font-size: 10px;
+  line-height: 10px;
+  background-color: green;
+  color: white;
+
+  display: none;
 }
 
 /* WHEN CUSTOMER VIEWS ITEM */
@@ -73,6 +93,7 @@
 
 .giftItem__open > form > .giftItem__open__title > .MuiSvgIcon-root {
   color: green;
+
   font-size: 30px;
 }
 
@@ -84,15 +105,12 @@
 
 .giftItem__open > form > .giftItem__open__submit > .MuiButton-root {
   margin: 15px;
+
   background-color: orange;
 }
 
-.giftItem__open > form > .giftItem__open__close > .MuiButton-root {
-  background-color: red;
-}
-
 .giftItem__open > form > textarea {
-  width: 60%;
+  width: 80%;
   height: 50%;
 
   font-size: 16px;
@@ -126,21 +144,26 @@
 
 @media only screen and (max-width: 1400px) {
   .giftItem__open {
-    height: 65vh;
+    height: 85vh;
 
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
+  .giftItem__open > .giftItem__slider {
+    width: 60%;
+    margin: 5px;
+  }
+
   .giftItem__open > form {
     width: 90%;
-    height: 40%;
+    height: 60%;
   }
 
   .giftItem__open > form > textarea {
     width: 100%;
-    height: 70%;
+    height: 55%;
   }
 }
 
@@ -163,17 +186,35 @@
     font-size: 14px;
   }
 
+  .giftItem__text > h4 {
+    font-size: 14px;
+  }
+
   .giftItem__slider {
     max-width: 65%;
     margin: 5px;
   }
 
-  .giftItem > .giftItem__text > .MuiButton-root {
+  .giftItem
+    > .giftItem__text
+    > .giftItem__text__buttons
+    > :nth-child(1)
+    .MuiButton-root {
     height: 25px;
     margin-bottom: 3px;
 
     font-size: 10px;
     line-height: 10px;
+
+    display: none;
+  }
+
+  .giftItem
+    > .giftItem__text
+    > .giftItem__text__buttons
+    > :nth-child(2)
+    .MuiButton-root {
+    display: block;
   }
 
   .giftItem__open {
@@ -191,6 +232,7 @@
   .giftItem__open > form {
     width: 90%;
     height: 100%;
+    padding: 5px;
   }
 
   .giftItem__open > form > textarea {
