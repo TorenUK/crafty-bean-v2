@@ -12,6 +12,7 @@ import { getBasketTotal } from "./Reducer";
 import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "./StateProvider";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import { Code } from "@material-ui/icons";
 
 function Payment() {
   const [{ basket, customer }, dispatch] = useStateValue();
@@ -40,11 +41,33 @@ function Payment() {
         url: `/payments/create?total=${getBasketTotal(basket) * 100}`,
       });
 
+      // what we get back from our server...
       setClientSecret(response.data.clientSecret);
     };
 
     getClientSecret();
   }, [basket]);
+
+  // CARD ELEMENT STYLING
+
+  const cardStyle = {
+    style: {
+      base: {
+        color: "#32325d",
+        fontFamily: "Arial, sans-serif",
+        fontSmoothing: "antialiased",
+        fontSize: "18px",
+        "::placeholder": {
+          color: "black",
+        },
+      },
+      invalid: {
+        color: "#fa755a",
+        iconColor: "#fa755a",
+      },
+    },
+    hidePostalCode: true,
+  };
 
   const handleSubmit = async (e) => {
     //stipe stuff
@@ -55,6 +78,13 @@ function Payment() {
       .confirmCardPayment(clientSecret, {
         payment_method: {
           card: elements.getElement(CardElement),
+          billing_details: {
+            address: {
+              line1: e.target.address.value,
+              postal_code: e.target.postal_code.value,
+            },
+            email: e.target.name.value,
+          },
         },
       })
       .then(({ paymentIntent }) => {
@@ -130,15 +160,34 @@ function Payment() {
           <div className="payment__details">
             <form onSubmit={handleSubmit}>
               <input
+                id="name"
+                name="name"
                 onChange={(e) => {
                   setCustomerEmail(e.target.value);
                 }}
-                type="text"
+                type="email"
+                autocomplete="email"
                 placeholder="email"
+              ></input>
+              <input
+                type="text"
+                name="address"
+                placeholder="address"
+                autoComplete="street-address"
+              ></input>
+              <input
+                type="text"
+                name="postal_code"
+                placeholder="postal code"
+                autoComplete="postal_code"
               ></input>
 
               <div className="stripe__element">
-                <CardElement onChange={handleChange} />
+                <CardElement
+                  id="card-element"
+                  onChange={handleChange}
+                  options={cardStyle}
+                />
               </div>
 
               <div className="payment__priceContainer">

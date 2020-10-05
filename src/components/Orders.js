@@ -29,7 +29,6 @@ function Orders() {
       );
   }, []);
 
-  console.log(orders);
   return (
     <div className="orders">
       <h1>thanks for your order!</h1>
