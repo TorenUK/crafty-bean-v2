@@ -1,11 +1,13 @@
 .giftItem {
   max-width: 420px;
-  box-shadow: 1px 1px 25px -1px rgba(0, 0, 0, 0.75);
-  border-radius: 20px;
   margin: 25px 70px;
-  background-image: linear-gradient(to bottom, #ffffff, #f3f3f3);
+
   display: flex;
   justify-content: center;
+
+  background-image: linear-gradient(to bottom, #ffffff, #f3f3f3);
+  box-shadow: 1px 1px 25px -1px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
 }
 
 .giftItem__slider {
@@ -25,14 +27,17 @@
 .giftItem__text > h2 {
   font-weight: 400;
 }
+
 .giftItem__text > h4 {
   padding: 2px;
 }
 
-.giftItem__text > p > span {
-  color: red;
-  font-weight: 500;
-  text-decoration: underline;
+.handmade > .MuiSvgIcon-root {
+  color: rgb(253, 147, 165);
+}
+
+.shipping > .MuiSvgIcon-root {
+  color: rgb(87, 112, 250);
 }
 
 .giftItem
@@ -77,9 +82,9 @@
   justify-content: space-between;
 
   background-color: white;
-  border: 8px solid green;
+  border: 6px solid pink;
   border-radius: 15px;
-  box-shadow: 1px 1px 25px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 85px -1px rgba(0, 0, 0, 0.75);
 }
 
 .giftItem__open > form {
@@ -104,6 +109,8 @@
 }
 
 .giftItem__open > form > .giftItem__open__submit > .MuiButton-root {
+  width: 150px;
+  height: 35px;
   margin: 15px;
 
   background-color: orange;
@@ -113,8 +120,10 @@
   width: 80%;
   height: 50%;
 
+  resize: none;
+  text-align: center;
   font-size: 16px;
-  border: 3px solid green;
+  border: 2px solid green;
   border-radius: 5px;
 }
 
@@ -144,7 +153,8 @@
 
 @media only screen and (max-width: 1400px) {
   .giftItem__open {
-    height: 85vh;
+    height: 65vh;
+    width: 50%;
 
     flex-direction: column;
     justify-content: center;
@@ -157,8 +167,8 @@
   }
 
   .giftItem__open > form {
-    width: 90%;
-    height: 60%;
+    width: 80%;
+    height: 100%;
   }
 
   .giftItem__open > form > textarea {
@@ -178,21 +188,33 @@
 @media only screen and (max-width: 540px) {
   .giftItem {
     max-width: 340px;
-    border-radius: 5px;
     margin: 25px 10px;
+
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 5px;
   }
 
   .giftItem__text__para {
+    margin: 5px;
+
     font-size: 14px;
   }
 
   .giftItem__text > h4 {
-    font-size: 14px;
+    margin: 5px;
+
+    font-size: 18px;
   }
 
   .giftItem__slider {
-    max-width: 65%;
+    max-width: 85%;
     margin: 5px;
+  }
+
+  .giftItem > .giftItem__text {
+    max-width: 100%;
   }
 
   .giftItem
@@ -200,12 +222,6 @@
     > .giftItem__text__buttons
     > :nth-child(1)
     .MuiButton-root {
-    height: 25px;
-    margin-bottom: 3px;
-
-    font-size: 10px;
-    line-height: 10px;
-
     display: none;
   }
 
@@ -214,6 +230,8 @@
     > .giftItem__text__buttons
     > :nth-child(2)
     .MuiButton-root {
+    margin: 15px;
+
     display: block;
   }
 

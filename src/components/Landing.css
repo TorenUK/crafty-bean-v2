@@ -23,10 +23,12 @@
 .landing__links {
   margin: 0 auto;
   width: 600px;
+
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+
   animation: buttons 6s ease forwards;
 }
 
@@ -57,7 +59,7 @@
 /*LOGO*/
 
 #logo {
-  width: 700px;
+  width: 650px;
   object-fit: contain;
 }
 

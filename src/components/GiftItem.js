@@ -25,9 +25,8 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
 
   const addToBasket = () => {
     setClicked(!clicked);
-    alert(` added ${name} to basket`);
 
-    // dispatch some action to data layer
+    // DISPATCH NEW ITEM TO BASKET IN DATA LAYER
     dispatch({
       type: "ADD_TO_BASKET",
       item: {
@@ -111,14 +110,18 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
       </div>
       <div className="giftItem__text">
         <h4>{name}</h4>
-        <h4>£{price}</h4>
+        <h2>£{price}</h2>
         <div>
           <p className="giftItem__text__para">handmade</p>
-          <FavoriteBorderIcon />
+          <div className="handmade">
+            <FavoriteBorderIcon />
+          </div>
         </div>
         <div>
           <p className="giftItem__text__para">dispatch: 1-2 working days</p>
-          <LocalShippingIcon />
+          <div className="shipping">
+            <LocalShippingIcon />
+          </div>
         </div>
         <div className="giftItem__text__buttons">
           <div>

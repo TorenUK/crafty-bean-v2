@@ -13,14 +13,17 @@ function FooterLinks(emailOpen, setEmailOpen) {
   return (
     <div className="footerLinks">
       <div className="footerLinks__link">
-        <Link to="#">
+        <a href="https://www.instagram.com/_craftybean/" target="blank">
           <InstagramIcon />
-        </Link>
+        </a>
       </div>
       <div className="footerLinks__link">
-        <Link to="#">
+        <a
+          href="https://www.facebook.com/_craftybean-107596764297226/"
+          target="blank"
+        >
           <FacebookIcon />
-        </Link>
+        </a>
       </div>
       <div className="footerLinks__link">
         <Link to="/email">

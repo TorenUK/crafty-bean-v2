@@ -14,7 +14,7 @@ function BasketNotify() {
     TweenMax.fromTo(
       basketNotify,
       { opacity: 0, y: -200 },
-      { opacity: 1, y: 0, duration: 0.5 }
+      { opacity: 1, y: 0, duration: 0.5, ease: Power3.easeOut }
     );
   }, [basket]);
 

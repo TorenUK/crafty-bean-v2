@@ -33,9 +33,10 @@ function Orders() {
   return (
     <div className="orders">
       <h1>thanks for your order!</h1>
+      <p>{customer}</p>
       <div className="orders__container">
         {orders?.map((order) => (
-          <OrderItem order={order} email={customer} />
+          <OrderItem order={order} />
         ))}
       </div>
     </div>

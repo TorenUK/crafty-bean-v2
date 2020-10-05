@@ -4,7 +4,6 @@ import React from "react";
 import "./Basket.css";
 import Subtotal from "./Subtotal";
 import BasketItem from "./BasketItem";
-import HomeLogo from "./HomeLogo";
 
 //material ui
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
@@ -39,7 +38,6 @@ function Basket() {
               />
             ))}
           </div>
-
           <Subtotal />
         </div>
       )}

@@ -136,11 +136,7 @@ function Payment() {
                 type="text"
                 placeholder="email"
               ></input>
-              <h4>address</h4>
 
-              <input type="text" placeholder="address"></input>
-              <h4>postcode</h4>
-              <input type="text" placeholder="postcode"></input>
               <div className="stripe__element">
                 <CardElement onChange={handleChange} />
               </div>

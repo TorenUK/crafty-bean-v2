@@ -29,12 +29,12 @@ function Info() {
     {
       image:
         "https://the-bureau.org.uk/wp-content/uploads/2020/07/coming-soon.jpg",
-      text: "something here...",
+      text: "christmas gifts",
     },
     {
       image:
         "https://the-bureau.org.uk/wp-content/uploads/2020/07/coming-soon.jpg",
-      text: "something here...",
+      text: "giveaways",
     },
   ]);
 

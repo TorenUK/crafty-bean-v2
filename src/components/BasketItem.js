@@ -19,10 +19,6 @@ function BasketItem({ id, name, price, image, message, hideButton }) {
     });
   };
 
-  const sendInput = () => {
-    console.log();
-  };
-
   return (
     <div className="basketItem">
       <img src={image} />

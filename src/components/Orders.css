@@ -11,14 +11,17 @@
 
 .orders > p {
   font-weight: 600;
-  border-bottom: 1px solid black;
-  margin: 10px;
+
+  margin: 5px;
+  padding: 5px;
 }
 
 .orders__container {
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 100%;
   margin: 40px auto;
+
+  overflow-y: scroll;
 
   background-color: pink;
 }
