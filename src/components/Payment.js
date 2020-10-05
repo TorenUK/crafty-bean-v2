@@ -12,7 +12,6 @@ import { getBasketTotal } from "./Reducer";
 import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "./StateProvider";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
-import { Code } from "@material-ui/icons";
 
 function Payment() {
   const [{ basket, customer }, dispatch] = useStateValue();
@@ -135,86 +134,80 @@ function Payment() {
   return (
     <div className="payment">
       <div className="payment__container">
-        <div className="payment__section">
-          <div className="payment__title">
-            <h3>review items</h3>
-          </div>
-          <div className="payment__items">
-            {basket.map((item) => (
-              <BasketItem
-                id={item.id}
-                customerEmail={customerEmail}
-                name={item.name}
-                image={item.image}
-                price={item.price}
-                message={item.message}
-                hideButton
-              />
-            ))}
-          </div>
+        <div className="payment__title">
+          <h3>review items</h3>
         </div>
-        <div className="payment__method">
-          <div className="payment__title">
-            <h3>payment</h3>
-          </div>
-          <div className="payment__details">
-            <form onSubmit={handleSubmit}>
-              <input
-                id="name"
-                name="name"
-                onChange={(e) => {
-                  setCustomerEmail(e.target.value);
-                }}
-                type="email"
-                autocomplete="email"
-                placeholder="email"
-              ></input>
-              <input
-                type="text"
-                name="address"
-                placeholder="address"
-                autoComplete="street-address"
-              ></input>
-              <input
-                type="text"
-                name="postal_code"
-                placeholder="postal code"
-                autoComplete="postal_code"
-              ></input>
-
-              <div className="stripe__element">
-                <CardElement
-                  id="card-element"
-                  onChange={handleChange}
-                  options={cardStyle}
-                />
-              </div>
-
-              <div className="payment__priceContainer">
-                <CurrencyFormat
-                  renderText={(value) => (
-                    <>
-                      <p>
-                        subtotal: {basket?.length} item(s){" "}
-                        <strong>{value}</strong>
-                      </p>
-                    </>
-                  )}
-                  decimalScale={2}
-                  value={getBasketTotal(basket)}
-                  displayType={"text"}
-                  thousandSeparator={true}
-                  prefix={"£"}
-                />
-
-                <button disabled={processing || disabled || succeeded}>
-                  <span>{processing ? <p>processing</p> : "pay now"}</span>
-                </button>
-              </div>
-              {error && <div>{error}</div>}
-            </form>
-          </div>
+        <div className="payment__items">
+          {basket.map((item) => (
+            <BasketItem
+              id={item.id}
+              customerEmail={customerEmail}
+              name={item.name}
+              image={item.image}
+              price={item.price}
+              message={item.message}
+              hideButton
+            />
+          ))}
         </div>
+
+        <div className="payment__title">
+          <h3>payment</h3>
+        </div>
+
+        <form onSubmit={handleSubmit}>
+          <input
+            id="name"
+            name="name"
+            onChange={(e) => {
+              setCustomerEmail(e.target.value);
+            }}
+            type="email"
+            autocomplete="email"
+            placeholder="email"
+          ></input>
+          <input
+            type="text"
+            name="address"
+            placeholder="address"
+            autoComplete="street-address"
+          ></input>
+          <input
+            type="text"
+            name="postal_code"
+            placeholder="postal code"
+            autoComplete="postal_code"
+          ></input>
+
+          <div className="stripe__element">
+            <CardElement
+              id="card-element"
+              onChange={handleChange}
+              options={cardStyle}
+            />
+          </div>
+
+          <CurrencyFormat
+            renderText={(value) => (
+              <>
+                <p>
+                  subtotal: {basket?.length} item(s) <strong>{value}</strong>
+                </p>
+              </>
+            )}
+            decimalScale={2}
+            value={getBasketTotal(basket)}
+            displayType={"text"}
+            thousandSeparator={true}
+            prefix={"£"}
+          />
+
+          <button disabled={processing || disabled || succeeded}>
+            <span>{processing ? <p>processing</p> : "pay now"}</span>
+          </button>
+
+          {error && <div>{error}</div>}
+        </form>
       </div>
     </div>
   );

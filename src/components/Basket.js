@@ -7,6 +7,7 @@ import BasketItem from "./BasketItem";
 
 //material ui
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import Button from "@material-ui/core/Button";
 
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
@@ -21,6 +22,13 @@ function Basket() {
         <div className="basket__div__empty">
           <ShoppingBasketIcon />
           <h2 className="basket__title__empty">your basket is empty</h2>
+          <div>
+            <Link to="/">
+              <Button size="small" variant="outlined">
+                Home
+              </Button>
+            </Link>
+          </div>
         </div>
       ) : (
         <div className="basket__container">

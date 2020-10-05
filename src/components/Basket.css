@@ -35,6 +35,10 @@
   opacity: 0.8;
 }
 
+.basket__title__empty {
+  margin-bottom: 20px;
+}
+
 .basket__container__title {
   padding: 40px;
 }
