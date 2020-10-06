@@ -65,6 +65,21 @@
   .gifts {
     height: fit-content;
   }
+
+  .gifts > .gifts__nav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .gifts > .gifts__logo > img {
+    object-fit: contain;
+    width: 150px;
+  }
+
+  .gifts__top :nth-child(1),
+  .gifts__top :nth-child(3) {
+    display: none;
+  }
 }
 
 /* IPHONE X */

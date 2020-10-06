@@ -24,8 +24,8 @@
 }
 
 .payment__items {
-  width: 60%;
-  height: 40%;
+  width: 70%;
+  height: 50%;
 
   overflow-y: scroll;
   display: flex;

@@ -37,7 +37,7 @@
 }
 
 .landing__links__button > .MuiButton-outlined {
-  border: 1px solid white !important;
+  box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
 }
 
 .landing__links__button > .MuiButton-root {

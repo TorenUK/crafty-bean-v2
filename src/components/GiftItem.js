@@ -78,7 +78,7 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
                 add to basket
               </Button>
             </div>
-            <div clasName="giftItem__open__close">
+            <div className="giftItem__open__close">
               {" "}
               <Button
                 size="medium"
@@ -110,7 +110,7 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
       </div>
       <div className="giftItem__text">
         <h4>{name}</h4>
-        <h2>£{price}</h2>
+        <h3>£{price}</h3>
         <div>
           <p className="giftItem__text__para">handmade</p>
           <div className="handmade">

@@ -14,6 +14,8 @@
   opacity: 0.6;
   transition: 0.3s;
   color: #fff;
+  box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
 }
 
 .footerLinks > .footerLinks__link > a .MuiSvgIcon-root:hover {
