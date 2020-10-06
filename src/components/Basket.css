@@ -35,6 +35,10 @@
   opacity: 0.8;
 }
 
+.basket__div__empty > a > .MuiButton-outlinedSizeSmall-root {
+  font-family: poppins, sans-serif;
+}
+
 .basket__title__empty {
   margin-bottom: 20px;
 }

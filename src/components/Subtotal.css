@@ -6,6 +6,12 @@
 
 .subtotal__links :nth-child(1) > a > .MuiButtonBase-root {
   background-color: #f98d2a;
+  font-family: poppins, sans-serif;
   font-size: 12px;
   margin: 10px;
+}
+
+.subtotal__links :nth-child(2) > a > .MuiButtonBase-root {
+  font-family: poppins, sans-serif;
+  font-size: 12px;
 }
