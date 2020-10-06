@@ -43,6 +43,8 @@
 
   .footerLinks > .footerLinks__link > a .MuiSvgIcon-root {
     font-size: 22px;
+
+    box-shadow: 1px 1px 15px -1px rgba(0, 0, 0, 0.75);
   }
 
   .footerLinks > .footerLinks__link > a {

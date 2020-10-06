@@ -139,15 +139,18 @@ function Payment() {
         </div>
         <div className="payment__items">
           {basket.map((item) => (
-            <BasketItem
-              id={item.id}
-              customerEmail={customerEmail}
-              name={item.name}
-              image={item.image}
-              price={item.price}
-              message={item.message}
-              hideButton
-            />
+            <div className="payment__item">
+              {" "}
+              <BasketItem
+                id={item.id}
+                customerEmail={customerEmail}
+                name={item.name}
+                image={item.image}
+                price={item.price}
+                message={item.message}
+                hideButton
+              />
+            </div>
           ))}
         </div>
 
@@ -163,7 +166,7 @@ function Payment() {
               setCustomerEmail(e.target.value);
             }}
             type="email"
-            autocomplete="email"
+            autoComplete="email"
             placeholder="email"
           ></input>
           <input
