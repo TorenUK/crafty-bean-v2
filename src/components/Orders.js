@@ -35,7 +35,9 @@ function Orders() {
       <p>{customer}</p>
       <div className="orders__container">
         {orders?.map((order) => (
-          <OrderItem order={order} />
+          <div className="orders__item">
+            <OrderItem order={order} />
+          </div>
         ))}
       </div>
     </div>

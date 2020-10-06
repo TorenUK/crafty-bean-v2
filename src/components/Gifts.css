@@ -66,6 +66,10 @@
     height: fit-content;
   }
 
+  .gifts__top > .gifts__top__section {
+    font-size: 14px;
+  }
+
   .gifts > .gifts__nav {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -74,17 +78,18 @@
   .gifts > .gifts__logo > img {
     object-fit: contain;
     width: 150px;
-  }
-
-  .gifts__top :nth-child(1),
-  .gifts__top :nth-child(3) {
-    display: none;
   }
 }
 
 /* IPHONE X */
 
 @media only screen and (max-width: 400px) {
+  .gifts__top > .gifts__top__section {
+    width: 80%;
+
+    font-size: 12px;
+  }
+
   .gifts > .gifts__nav {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -93,10 +98,5 @@
   .gifts > .gifts__logo > img {
     object-fit: contain;
     width: 150px;
-  }
-
-  .gifts__top :nth-child(1),
-  .gifts__top :nth-child(3) {
-    display: none;
   }
 }

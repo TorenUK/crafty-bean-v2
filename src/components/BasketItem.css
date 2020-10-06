@@ -69,26 +69,25 @@
 
 /* IPHONE X  */
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .basketItem {
     max-width: 350px;
-    margin: 20px 0;
+    margin: 5px 15px;
 
     flex-direction: column;
 
-    border-right: none;
-    border-bottom: 1px solid white;
+    border: none;
   }
 
   .basketItem > img {
     object-fit: contain;
-    max-width: 170px;
+    max-width: 150px;
   }
 
   .basketItem__info {
-    height: 50%;
+    height: 60%;
     margin: 15px;
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .basketItem__info > .basketItem__customize {
