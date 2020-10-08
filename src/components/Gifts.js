@@ -27,7 +27,7 @@ function Gifts() {
     <div id="gifts" className="gifts">
       <div className="gifts__top">
         <div className="gifts__top__section">
-          <h2>Enter: CODE123 at checkout for 10% off </h2>
+          <h2>use code EXAMPLE at checkout for 10% off </h2>
         </div>
       </div>
       <div className="gifts__container">

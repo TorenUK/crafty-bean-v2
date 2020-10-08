@@ -5,12 +5,13 @@
   transform: translate(-50%, -50%);
   z-index: 200;
 
-  width: 60%;
+  width: 40%;
   height: 20%;
 
   text-align: center;
   background-color: white;
   box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
+  border: 1px solid pink;
   border-radius: 20px;
 }
 
@@ -25,7 +26,14 @@
 }
 
 .popup__inner > form {
-  width: 80%;
+  width: 70%;
+}
+.popup__inner > .popup__button .MuiButtonBase-root {
+  font-family: poppins, sans-serif;
+  background-color: orange;
+}
+.popup__inner > .popup__button__close .MuiButtonBase-root {
+  font-family: poppins, sans-serif;
 }
 
 .popup__inner > form > input {

@@ -25,7 +25,7 @@ function Basket() {
           <div>
             <Link to="/">
               <Button size="small" variant="outlined">
-                Home
+                continue shopping
               </Button>
             </Link>
           </div>
