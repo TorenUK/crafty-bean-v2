@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
@@ -11,6 +11,7 @@ import Payment from "./components/Payment";
 import Orders from "./components/Orders";
 import ScrollToTop from "./components/ScrollToTop";
 import Email from "./components/Email";
+import Popup from "./components/Popup";
 
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements, useElements } from "@stripe/react-stripe-js";
@@ -20,6 +21,18 @@ const promise = loadStripe(
 );
 
 function App() {
+  const [showPopup, setShowPopup] = useState(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowPopup(true);
+    }, 5000);
+  }, []);
+
+  const closePopup = () => {
+    setShowPopup(null);
+  };
+
   return (
     //BEM
 
@@ -27,6 +40,7 @@ function App() {
       <ScrollToTop>
         <div className="app">
           <div id="app__body" className="app__body">
+            {showPopup ? <Popup closePopup={closePopup} /> : null}
             <Switch>
               <Route path="/email">
                 <Email />

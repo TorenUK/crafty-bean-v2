@@ -17,9 +17,6 @@ function Email() {
         <h1>contact us</h1>
         <div className="email__content">
           <h2>coming soon</h2>
-          <form>
-            <input type="email" placeholder="email" />
-          </form>
         </div>
         <Link to="/">
           <Button>continue shopping</Button>
