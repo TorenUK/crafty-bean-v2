@@ -101,7 +101,7 @@ function Info() {
       </div>
       <div className="info__middle-row">
         {info.map((item) => (
-          <div className="info__middle__segment">
+          <div key={Math.random()} className="info__middle__segment">
             <img src={item.image} />
             <p>{item.text}</p>
           </div>

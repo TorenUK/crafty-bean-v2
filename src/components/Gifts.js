@@ -27,13 +27,14 @@ function Gifts() {
     <div id="gifts" className="gifts">
       <div className="gifts__top">
         <div className="gifts__top__section">
-          <h2>use code CODE123 at checkout for 10% off </h2>
+          <h2>Enter: CODE123 at checkout for 10% off </h2>
         </div>
       </div>
       <div className="gifts__container">
         {/* passing the data down to GiftItem.js */}
         {items.map(({ name, price, images }) => (
           <GiftItem
+            key={Math.random()}
             id={uuid()}
             name={name}
             price={price}

@@ -1,8 +1,8 @@
+require("dotenv").config();
+
 const functions = require("firebase-functions");
 const express = require("express");
 const cors = require("cors");
-
-require("dotenv").config();
 
 const stripe = require("stripe")(process.env.SECRET_KEY);
 
@@ -22,15 +22,21 @@ app.post("/payments/create", async (request, response) => {
   // what we're sending from the front-end...
   const total = request.query.total;
 
-  const paymentIntent = await stripe.paymentIntents.create({
-    amount: total,
-    currency: "gbp",
-    receipt_email: email,
-  });
-  // ok created
-  response.status(201).send({
-    clientSecret: paymentIntent.client_secret,
-  });
+  if (total <= 0) {
+    console.log("invalid request");
+  } else {
+    // api call
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: total,
+      currency: "gbp",
+      receipt_email: email,
+    });
+    // ok created
+    // send to front end
+    response.status(201).send({
+      clientSecret: paymentIntent.client_secret,
+    });
+  }
 });
 
 // LISTEN COMMAND

@@ -12,11 +12,19 @@ import { Link } from "react-router-dom";
 function Email() {
   return (
     <div className="email">
-      <h1>contact us</h1>
-      <h2>coming soon</h2>
-      <Link to="/">
-        <Button>continue shopping</Button>
-      </Link>
+      <div className="email__container">
+        {" "}
+        <h1>contact us</h1>
+        <div className="email__content">
+          <h2>coming soon</h2>
+          <form>
+            <input type="email" placeholder="email" />
+          </form>
+        </div>
+        <Link to="/">
+          <Button>continue shopping</Button>
+        </Link>
+      </div>
     </div>
   );
 }
