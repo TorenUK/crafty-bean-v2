@@ -38,6 +38,7 @@
 .gifts__top > .gifts__top__section > h2 {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .gifts__top > .gifts__top__section > h2 > .MuiSvgIcon-root {

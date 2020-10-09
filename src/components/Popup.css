@@ -51,6 +51,8 @@
 @media only screen and (max-width: 1400px) {
   .popup {
     width: 35%;
+
+    left: 80%;
   }
 }
 

@@ -24,7 +24,7 @@ function Popup({ closePopup }) {
   return (
     <div ref={popup} className="popup">
       <div className="popup__inner">
-        <h2>sign up for 10% off</h2>
+        <h2>sign up for 10% off (inactive test)</h2>
         {submitted ? (
           <p>thanks for signing up!</p>
         ) : (

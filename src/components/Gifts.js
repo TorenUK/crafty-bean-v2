@@ -37,7 +37,7 @@ function Gifts() {
       </div>
       <div className="gifts__container">
         {/* passing the data down to GiftItem.js */}
-        {items.map(({ name, price, images }) => (
+        {items.map(({ name, price, images, newIn }) => (
           <GiftItem
             key={Math.random()}
             id={uuid()}
@@ -46,6 +46,7 @@ function Gifts() {
             image1={images[0]}
             image2={images[1]}
             image3={images[2]}
+            newIn={newIn}
           />
         ))}
       </div>

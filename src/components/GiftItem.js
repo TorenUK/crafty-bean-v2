@@ -17,7 +17,7 @@ import LocalFloristIcon from "@material-ui/icons/LocalFlorist";
 
 import { useStateValue } from "./StateProvider";
 
-function GiftItem({ id, name, price, image1, image2, image3 }) {
+function GiftItem({ id, name, price, image1, image2, image3, newIn }) {
   const [{ basket }, dispatch] = useStateValue();
 
   const [clicked, setClicked] = useState(false);
@@ -93,6 +93,7 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
           </form>
         </div>
       ) : null}
+      {newIn ? <div className="newIn">NEW IN</div> : null}
 
       <div className="giftItem__slider">
         <Carousel>
