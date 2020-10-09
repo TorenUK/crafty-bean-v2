@@ -13,6 +13,7 @@ import Button from "@material-ui/core/Button";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 import CreateIcon from "@material-ui/icons/Create";
+import LocalFloristIcon from "@material-ui/icons/LocalFlorist";
 
 import { useStateValue } from "./StateProvider";
 
@@ -115,6 +116,14 @@ function GiftItem({ id, name, price, image1, image2, image3 }) {
           <p className="giftItem__text__para">handmade</p>
           <div className="handmade">
             <FavoriteBorderIcon />
+          </div>
+        </div>
+        <div>
+          <p className="giftItem__text__para">
+            plantable <br /> attached
+          </p>
+          <div className="flower">
+            <LocalFloristIcon />
           </div>
         </div>
         <div>

@@ -17,14 +17,14 @@ function Popup({ closePopup }) {
   useEffect(() => {
     gsap.fromTo(
       popup.current,
-      { opacity: 0, x: -1000 },
-      { opacity: 1, x: 1, duration: 0.8 }
+      { opacity: 0, x: -2000 },
+      { opacity: 1, x: 0, duration: 0.9, ease: "ease out " }
     );
   }, []);
   return (
     <div ref={popup} className="popup">
       <div className="popup__inner">
-        <h2>sign up for exclusive discounts?</h2>
+        <h2>sign up for 10% off</h2>
         {submitted ? (
           <p>thanks for signing up!</p>
         ) : (

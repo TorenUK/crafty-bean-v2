@@ -35,6 +35,16 @@
   box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
 }
 
+.gifts__top > .gifts__top__section > h2 {
+  display: flex;
+  align-items: center;
+}
+
+.gifts__top > .gifts__top__section > h2 > .MuiSvgIcon-root {
+  color: green;
+  margin-left: 5px;
+}
+
 .gifts__container {
   margin: 20px auto;
   height: fit-content;

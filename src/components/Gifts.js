@@ -7,6 +7,9 @@ import FooterLinks from "./FooterLinks";
 import database from "./firebase";
 import BasketNotify from "./BasketNotify";
 
+// material ui
+import LocalFloristIcon from "@material-ui/icons/LocalFlorist";
+
 import uuid from "react-uuid";
 import { useStateValue } from "./StateProvider";
 
@@ -27,7 +30,9 @@ function Gifts() {
     <div id="gifts" className="gifts">
       <div className="gifts__top">
         <div className="gifts__top__section">
-          <h2>use code EXAMPLE at checkout for 10% off </h2>
+          <h2>
+            Seed Bomb Cards <LocalFloristIcon />
+          </h2>
         </div>
       </div>
       <div className="gifts__container">
