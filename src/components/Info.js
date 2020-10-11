@@ -7,34 +7,28 @@ import FooterLinks from "./FooterLinks";
 function Info() {
   const [info, setInfo] = useState([
     {
-      image:
-        "https://the-bureau.org.uk/wp-content/uploads/2020/07/coming-soon.jpg",
+      image: "comingsoon.jpg",
       text: "seed bomb prints",
     },
     {
-      image:
-        "https://the-bureau.org.uk/wp-content/uploads/2020/07/coming-soon.jpg",
+      image: "comingsoon.jpg",
       text: "handmade planters",
     },
     {
-      image:
-        "https://the-bureau.org.uk/wp-content/uploads/2020/07/coming-soon.jpg",
-      text: "coming soon",
-    },
-    {
-      image:
-        "https://the-bureau.org.uk/wp-content/uploads/2020/07/coming-soon.jpg",
-      text: "free uk postage",
-    },
-    {
-      image:
-        "https://the-bureau.org.uk/wp-content/uploads/2020/07/coming-soon.jpg",
+      image: "comingsoon.jpg",
       text: "christmas gifts",
     },
     {
-      image:
-        "https://the-bureau.org.uk/wp-content/uploads/2020/07/coming-soon.jpg",
+      image: "comingsoon.jpg",
       text: "giveaways",
+    },
+    {
+      image: "comingsoon.jpg",
+      text: "coming soon",
+    },
+    {
+      image: "comingsoon.jpg",
+      text: "coming soon",
     },
   ]);
 
@@ -103,7 +97,7 @@ function Info() {
         {info.map((item) => (
           <div key={Math.random()} className="info__middle__segment">
             <img src={item.image} />
-            <p>{item.text}</p>
+            <div className="info__sticker">{item.text}</div>
           </div>
         ))}
       </div>

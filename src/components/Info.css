@@ -86,6 +86,8 @@
 }
 
 .info__middle__segment {
+  position: relative;
+
   max-width: 10%;
   min-width: 300px;
   max-height: 300px;
@@ -98,11 +100,27 @@
   box-shadow: 1px 1px 15px -1px rgba(0, 0, 0, 0.75);
 }
 
+.info__middle__segment > .info__sticker {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+
+  width: fit-content;
+  margin: -20px 0;
+  padding: 2px 15px;
+
+  background-color: white;
+
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
+}
+
 .info__middle__segment > img {
   object-fit: contain;
   width: 100%;
   min-height: 80%;
-  max-height: 70%;
+  max-height: 100%;
 }
 
 .info__bottom__segment {
@@ -145,7 +163,7 @@
   }
 
   .info__middle__segment {
-    max-width: 10%;
+    max-width: 25%;
     min-width: 200px;
     max-height: 200px;
     margin: 1 5px;
@@ -155,7 +173,7 @@
     object-fit: contain;
     width: 100%;
     min-height: 70%;
-    max-height: 70%;
+    max-height: 100%;
   }
 
   .info__bottom__segment {
@@ -204,15 +222,22 @@
   .info__middle__segment {
     max-width: 10%;
     min-width: 200px;
-    max-height: 200px;
+    max-height: 250px;
     margin: 5px;
+  }
+
+  .info__middle__segment > .info__sticker {
+    max-width: 90%;
+    margin: -15px 0;
+
+    font-size: 12px;
   }
 
   .info__middle__segment > img {
     object-fit: contain;
     width: 100%;
     min-height: 70%;
-    max-height: 70%;
+    max-height: 90%;
   }
 
   .info__bottom__segment > .info__bottom__segment__logo {

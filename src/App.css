@@ -3,6 +3,10 @@ a {
   color: #fff;
 }
 
+body {
+  background-image: linear-gradient(to bottom, #ffecd2, #ffb095);
+}
+
 .app {
   display: grid;
   place-items: center;
