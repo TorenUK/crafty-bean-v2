@@ -69,6 +69,7 @@ function GiftItem({ id, name, price, image1, image2, image3, newIn }) {
             </div>
             {/* SETTING INPUT STATE TO USER INPUT */}
             <textarea
+              wrap="hard"
               onChange={(e) => {
                 setInput(e.target.value);
               }}

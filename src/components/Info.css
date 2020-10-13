@@ -227,10 +227,10 @@
   }
 
   .info__middle__segment > .info__sticker {
-    max-width: 90%;
-    margin: -15px 0;
+    max-width: 80%;
+    margin: -25px 0;
 
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .info__middle__segment > img {

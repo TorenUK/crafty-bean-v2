@@ -26,8 +26,9 @@ function BasketItem({ id, name, price, image, message, hideButton }) {
       <div className="basketItem__info">
         <h4>{name}</h4>
         <h3>£{price}</h3>
-        <h5> your custom message: </h5>
-        <p>{message}</p>
+        {message ? <h5> your custom message: </h5> : null}
+
+        <p className="basketItem__info__message">{message}</p>
         {/* ONLY SHOW THIS BUTTON IN BASKET 
         IF hideButton IS TRUE HIDE THE BUTTON*/}
         {!hideButton && (

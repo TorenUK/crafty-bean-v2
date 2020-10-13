@@ -1,5 +1,5 @@
 .gifts {
-  min-height: 100vh;
+  min-height: 100%;
   position: relative;
   scroll-snap-align: start;
   text-align: center;

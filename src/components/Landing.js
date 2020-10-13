@@ -72,7 +72,7 @@ function Landing() {
       <div className="landing__links">
         <div className="landing__links__button">
           <Button href="#gifts" size="small" variant="outlined">
-            Personalised Gifts
+            seed bomb cards
           </Button>
         </div>
         <div className="landing__links__button">

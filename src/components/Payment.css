@@ -1,9 +1,6 @@
 .payment {
   width: 100%;
   height: 100%;
-
-  display: grid;
-  place-items: center;
 }
 
 .payment__title {
@@ -24,7 +21,7 @@
 }
 
 .payment__items {
-  width: 70%;
+  width: 80%;
   height: 40%;
 
   -webkit-overflow-scrolling: touch;
@@ -36,6 +33,13 @@
   border: 1px solid white;
   border-radius: 5px;
   box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
+}
+
+.payment__item {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
 }
 
 form {
@@ -96,7 +100,7 @@ form > button {
 
   .payment__items {
     width: 80%;
-    height: 35%;
+    height: 100%;
 
     flex-direction: column;
     align-items: center;
@@ -113,12 +117,14 @@ form > button {
   .payment__item {
     height: 100%;
     width: 100%;
+    margin: 1px 0;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
     background-color: white;
+    border-radius: 5px;
   }
 
   form {
