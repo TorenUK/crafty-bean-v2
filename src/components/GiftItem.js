@@ -17,7 +17,17 @@ import LocalFloristIcon from "@material-ui/icons/LocalFlorist";
 
 import { useStateValue } from "./StateProvider";
 
-function GiftItem({ id, name, price, image1, image2, image3, newIn }) {
+function GiftItem({
+  id,
+  name,
+  price,
+  image1,
+  image2,
+  image3,
+  image4,
+  newIn,
+  plantableAttached,
+}) {
   const [{ basket }, dispatch] = useStateValue();
 
   const [clicked, setClicked] = useState(false);
@@ -56,6 +66,7 @@ function GiftItem({ id, name, price, image1, image2, image3, newIn }) {
               <div>
                 <img src={image3} />
               </div>
+
               {/*if there are 4 images present*/}
               {/*{image4 ? : <img src={image4}>} ????????*/}
             </Carousel>
@@ -107,6 +118,7 @@ function GiftItem({ id, name, price, image1, image2, image3, newIn }) {
           <div>
             <img src={image3} />
           </div>
+
           {/*if there are 4 images present*/}
           {/*{image4 ? : <img src={image4}>} ????????*/}
         </Carousel>
@@ -120,13 +132,18 @@ function GiftItem({ id, name, price, image1, image2, image3, newIn }) {
             <FavoriteBorderIcon />
           </div>
         </div>
+
         <div>
-          <p className="giftItem__text__para">
-            plantable <br /> attached
-          </p>
-          <div className="flower">
-            <LocalFloristIcon />
-          </div>
+          {!plantableAttached ? null : (
+            <div>
+              <p className="giftItem__text__para">
+                plantable <br /> attached
+              </p>
+              <div className="flower">
+                <LocalFloristIcon />
+              </div>
+            </div>
+          )}
         </div>
         <div>
           <p className="giftItem__text__para">dispatch: 1-2 working days</p>

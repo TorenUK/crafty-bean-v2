@@ -31,13 +31,13 @@ function Gifts() {
       <div className="gifts__top">
         <div className="gifts__top__section">
           <h2>
-            Seed Bomb Cards <LocalFloristIcon />
+            Personalised Gifts <LocalFloristIcon />
           </h2>
         </div>
       </div>
       <div className="gifts__container">
         {/* passing the data down to GiftItem.js */}
-        {items.map(({ name, price, images, newIn }) => (
+        {items.map(({ name, price, images, newIn, plantableAttached }) => (
           <GiftItem
             key={Math.random()}
             id={uuid()}
@@ -46,7 +46,9 @@ function Gifts() {
             image1={images[0]}
             image2={images[1]}
             image3={images[2]}
+            image4={images[3]}
             newIn={newIn}
+            plantableAttached={plantableAttached}
           />
         ))}
       </div>

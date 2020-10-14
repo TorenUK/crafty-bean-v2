@@ -26,7 +26,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setShowPopup(true);
-    }, 10000);
+    }, 5000);
   }, []);
 
   const closePopup = () => {
