@@ -37,20 +37,32 @@ function Gifts() {
       </div>
       <div className="gifts__container">
         {/* passing the data down to GiftItem.js */}
-        {items.map(({ name, price, images, newIn, plantableAttached }) => (
-          <GiftItem
-            key={Math.random()}
-            id={uuid()}
-            name={name}
-            price={price}
-            image1={images[0]}
-            image2={images[1]}
-            image3={images[2]}
-            image4={images[3]}
-            newIn={newIn}
-            plantableAttached={plantableAttached}
-          />
-        ))}
+        {items.map(
+          ({
+            name,
+            price,
+            images,
+            newIn,
+            plantableAttached,
+            freeShipping,
+            customisable,
+          }) => (
+            <GiftItem
+              key={Math.random()}
+              id={uuid()}
+              name={name}
+              price={price}
+              image1={images[0]}
+              image2={images[1]}
+              image3={images[2]}
+              image4={images[3]}
+              newIn={newIn}
+              plantableAttached={plantableAttached}
+              freeShipping={freeShipping}
+              customisable={customisable}
+            />
+          )
+        )}
       </div>
 
       <div className="gifts__logo">

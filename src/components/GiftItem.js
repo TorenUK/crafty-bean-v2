@@ -24,9 +24,10 @@ function GiftItem({
   image1,
   image2,
   image3,
-  image4,
   newIn,
   plantableAttached,
+  freeShipping,
+  customisable,
 }) {
   const [{ basket }, dispatch] = useStateValue();
 
@@ -71,38 +72,81 @@ function GiftItem({
               {/*{image4 ? : <img src={image4}>} ????????*/}
             </Carousel>
           </div>
-
-          <form>
-            <div className="giftItem__open__title">
-              {" "}
-              <CreateIcon />
-              <h3>customise your gift</h3>
-            </div>
-            {/* SETTING INPUT STATE TO USER INPUT */}
-            <textarea
-              wrap="hard"
-              onChange={(e) => {
-                setInput(e.target.value);
-              }}
-              placeholder="enter your message..."
-            ></textarea>
-            <div className="giftItem__open__submit">
-              <Button size="large" onClick={addToBasket}>
-                add to basket
-              </Button>
-            </div>
-            <div className="giftItem__open__close">
-              {" "}
-              <Button
-                size="medium"
-                onClick={() => {
-                  setClicked(!clicked);
+          {customisable ? (
+            <form>
+              <div className="giftItem__open__title">
+                {" "}
+                <CreateIcon />
+                <h3>customise your gift</h3>
+              </div>
+              {/* SETTING INPUT STATE TO USER INPUT */}
+              <textarea
+                wrap="hard"
+                onChange={(e) => {
+                  setInput(e.target.value);
                 }}
-              >
-                close
-              </Button>
+                placeholder="enter your message..."
+              ></textarea>
+              <div className="giftItem__open__submit">
+                <Button size="large" onClick={addToBasket}>
+                  add to basket
+                </Button>
+              </div>
+              <div className="giftItem__open__close">
+                {" "}
+                <Button
+                  size="medium"
+                  onClick={() => {
+                    setClicked(!clicked);
+                  }}
+                >
+                  close
+                </Button>
+              </div>
+            </form>
+          ) : (
+            <div className="giftItem__description">
+              <p>
+                Small handmade resin plant pot, perfect for succulents, cacti
+                etc. This is our bronze planter with gold flakes, it makes a
+                great addition to any room and also makes a great gift.
+              </p>
+              <br />
+              <p>
+                -Handmade by me in Leicester
+                <br /> - Due to them being handmade each pot is unique
+                <br /> - Each pot is made using resin and is sprayed with
+                sealant
+                <br /> - Recommended for indoor use
+              </p>
+              <br />
+              <p>Dimensions: Roughly H-7cm X W-8CM X D-6CM</p>
+              <br />
+              <p>Please note: Plant is not included.</p>
+              <br />
+              <p>
+                All pots are shipped royal mail 2nd class unless you choose
+                “express” shipping in which case they will be sent 1st class
+                royal mail.
+              </p>
+              <div className="giftItem__open__submit">
+                <Button size="large" onClick={addToBasket}>
+                  add to basket
+                </Button>
+              </div>
+              <div className="giftItem__open__close">
+                {" "}
+                <Button
+                  size="medium"
+                  onClick={() => {
+                    setClicked(!clicked);
+                  }}
+                >
+                  close
+                </Button>
+              </div>
             </div>
-          </form>
+          )}
         </div>
       ) : null}
       {newIn ? <div className="newIn">NEW IN</div> : null}
@@ -134,7 +178,7 @@ function GiftItem({
         </div>
 
         <div>
-          {!plantableAttached ? null : (
+          {plantableAttached ? (
             <div>
               <p className="giftItem__text__para">
                 plantable <br /> attached
@@ -143,14 +187,17 @@ function GiftItem({
                 <LocalFloristIcon />
               </div>
             </div>
-          )}
+          ) : null}
         </div>
-        <div>
-          <p className="giftItem__text__para">dispatch: 1-2 working days</p>
-          <div className="shipping">
-            <LocalShippingIcon />
+        {freeShipping ? (
+          <div>
+            <p className="giftItem__text__para">Free UK Shipping</p>
+            <div className="shipping">
+              <LocalShippingIcon />
+            </div>
           </div>
-        </div>
+        ) : null}
+
         <div className="giftItem__text__buttons">
           <div>
             <Button
