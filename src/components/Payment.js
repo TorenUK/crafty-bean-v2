@@ -167,12 +167,12 @@ function Payment() {
             }}
             type="email"
             autoComplete="email"
-            placeholder="email"
+            placeholder="email address"
           ></input>
           <input
             type="text"
             name="address"
-            placeholder="address"
+            placeholder="address line 1"
             autoComplete="street-address"
           ></input>
           <input

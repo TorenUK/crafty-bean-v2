@@ -41,6 +41,17 @@
   border-radius: 5px;
 }
 
+.basketItem__info > h3 {
+  margin-top: 5px;
+  padding: 6px;
+
+  font-weight: 600;
+
+  box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.75);
+  border: 1px solid pink;
+  border-radius: 5px;
+}
+
 .basketItem__info__message {
   max-width: 100%;
   margin: 10px;
