@@ -17,8 +17,8 @@ function Popup({ closePopup }) {
   useEffect(() => {
     gsap.fromTo(
       popup.current,
-      { opacity: 0, x: -2000 },
-      { opacity: 1, x: 0, duration: 0.9, ease: "ease out " }
+      { x: -2000 },
+      { x: 0, duration: 0.9, ease: "ease out " }
     );
   }, []);
   return (
@@ -49,7 +49,7 @@ function Popup({ closePopup }) {
         </div>
         <div className="popup__button__close">
           <Button size="small" variant="outlined" onClick={closePopup}>
-            close
+            X
           </Button>
         </div>
       </div>

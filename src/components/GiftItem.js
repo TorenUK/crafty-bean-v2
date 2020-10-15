@@ -47,6 +47,7 @@ function GiftItem({
         price: price,
         image: image1,
         message: input,
+        freeShipping: freeShipping,
       },
     });
   };

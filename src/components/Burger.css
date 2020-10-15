@@ -1,0 +1,46 @@
+* {
+  list-style: none;
+}
+
+.burger {
+  position: fixed;
+  top: 5%;
+  right: 10%;
+  transform: translate(-10%, -10%);
+
+  width: 30px;
+  height: 50px;
+
+  display: none;
+  cursor: pointer;
+  z-index: 300;
+}
+
+.burger__line {
+  height: 4px;
+  width: 100%;
+  margin: 5px;
+
+  background-color: black;
+}
+
+.burger__nav {
+  position: absolute;
+  top: 50%;
+  right: 90%;
+
+  width: 200px;
+  height: 300px;
+
+  background-color: white;
+
+  transition: all ease-in-out;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 500px) {
+  .burger {
+    display: block;
+  }
+}

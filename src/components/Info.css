@@ -227,7 +227,7 @@
   }
 
   .info__middle__segment > .info__sticker {
-    max-width: 80%;
+    max-width: 100%;
     margin: -25px 0;
 
     font-size: 11px;

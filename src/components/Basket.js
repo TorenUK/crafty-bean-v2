@@ -38,6 +38,7 @@ function Basket() {
           <div className="basket__container__div">
             {basket?.map((item) => (
               <BasketItem
+                key={Math.random()}
                 id={item.id}
                 name={item.name}
                 price={item.price}

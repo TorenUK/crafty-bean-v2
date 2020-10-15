@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Subtotal.css";
 import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "./StateProvider";
@@ -9,6 +9,8 @@ import Button from "@material-ui/core/Button";
 function Subtotal() {
   const [{ basket }] = useStateValue();
   const history = useHistory();
+
+  // calculate shipping costs
 
   return (
     <div className="subtotal">

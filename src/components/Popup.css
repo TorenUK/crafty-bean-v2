@@ -7,9 +7,10 @@
 
   width: 20%;
   height: 15%;
+  padding: 15px 0;
 
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.801);
+  background-color: rgb(255, 255, 255);
   box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
   border: 1px solid pink;
   border-radius: 20px;
@@ -31,6 +32,7 @@
 .popup__inner > .popup__button .MuiButtonBase-root {
   font-family: poppins, sans-serif;
   background-color: orange;
+  margin: 5px 0;
 }
 .popup__inner > .popup__button__close .MuiButtonBase-root {
   font-family: poppins, sans-serif;
@@ -82,6 +84,6 @@
   }
 
   .popup__inner > form {
-    width: 100%;
+    width: 80%;
   }
 }

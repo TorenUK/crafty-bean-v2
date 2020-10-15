@@ -31,6 +31,9 @@ function Payment() {
 
   const [customerEmail, setCustomerEmail] = useState("");
 
+  const [shipping, setShipping] = useState(false);
+  const [shippingCost, setShippingCost] = useState("");
+
   useEffect(() => {
     // generate client secret every time basket amount changes
 
@@ -45,6 +48,12 @@ function Payment() {
     };
 
     getClientSecret();
+
+    basket.map((item) => {
+      if (item.freeShipping == false) {
+        setShipping(true);
+      }
+    });
   }, [basket]);
 
   // CARD ELEMENT STYLING
@@ -142,6 +151,7 @@ function Payment() {
             <div className="payment__item">
               {" "}
               <BasketItem
+                key={Math.random()}
                 id={item.id}
                 customerEmail={customerEmail}
                 name={item.name}
@@ -157,6 +167,30 @@ function Payment() {
         <div className="payment__title">
           <h3>payment</h3>
         </div>
+
+        {/* SHIPPING INPUT */}
+        {/* ONLY DISPLAY IF AN ITEM IN THE BASKET DOES NOT HAVE FREE SHIPPING */}
+
+        {shipping ? (
+          <div className="payment__shipping">
+            <h3>shipping</h3>
+            <form>
+              <div>
+                {" "}
+                <div>
+                  <input type="radio" name="shipping" value="1st class" />
+                  <label for="1st class">1st class</label>
+                </div>
+                <div>
+                  <input type="radio" name="shipping" value="2nd class" />
+                  <label for="2nd class">2nd class </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        ) : (
+          <h3>Shipping: free</h3>
+        )}
 
         <form onSubmit={handleSubmit}>
           <input

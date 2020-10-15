@@ -12,6 +12,7 @@ import Orders from "./components/Orders";
 import ScrollToTop from "./components/ScrollToTop";
 import Email from "./components/Email";
 import Popup from "./components/Popup";
+import Burger from "./components/Burger";
 
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements, useElements } from "@stripe/react-stripe-js";
