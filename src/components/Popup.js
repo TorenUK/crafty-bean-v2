@@ -36,12 +36,12 @@ function Popup({ closePopup }) {
         <div className="popup__button">
           <Button
             size="small"
-            variant="outlined"
+            variant="contained"
             onClick={() => {
               setSubmitted(true);
               setTimeout(() => {
                 closePopup();
-              }, 2000);
+              }, 1500);
             }}
           >
             submit
@@ -49,7 +49,7 @@ function Popup({ closePopup }) {
         </div>
         <div className="popup__button__close">
           <Button size="small" variant="outlined" onClick={closePopup}>
-            X
+            close
           </Button>
         </div>
       </div>

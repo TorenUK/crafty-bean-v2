@@ -231,6 +231,7 @@
     margin: -25px 0;
 
     font-size: 11px;
+    display: none;
   }
 
   .info__middle__segment > img {

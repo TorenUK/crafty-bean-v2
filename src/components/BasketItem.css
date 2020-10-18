@@ -84,8 +84,9 @@
 
 @media only screen and (max-width: 1200px) {
   .basketItem {
-    width: 70%;
+    width: 80%;
     min-height: 150px;
+
     max-width: 400px;
     margin: 5px 15px;
 
