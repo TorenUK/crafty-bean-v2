@@ -41,7 +41,7 @@ function App() {
       <ScrollToTop>
         <div className="app">
           <div id="app__body" className="app__body">
-            {showPopup ? <Popup closePopup={closePopup} /> : null}
+            {/* {showPopup ? <Popup closePopup={closePopup} /> : null} */}
             <Switch>
               <Route path="/email">
                 <Email />
