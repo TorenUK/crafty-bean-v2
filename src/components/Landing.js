@@ -9,15 +9,15 @@ import FooterLinks from "./FooterLinks";
 import gsap from "gsap";
 
 function Landing() {
-  let tl = gsap.timeline({ defaults: { duration: 0.4 } });
+  let tl = gsap.timeline({ defaults: { duration: 3, ease: "ease-in-out" } });
 
   useEffect(() => {
     tl.fromTo("#leaf3", { rotate: 20 }, { rotate: 0, delay: 2.5 })
-      .fromTo("#leaf5", { rotate: 10 }, { rotate: 0 }, "-=.4")
-      .fromTo("#leaf6", { rotate: -20 }, { rotate: 0 }, "-=.4")
-      .fromTo("#leaf1", { rotate: -20 }, { rotate: 0 }, "-=.4")
-      .fromTo("#leaf2", { rotate: -10 }, { rotate: 0 }, "-=.4")
-      .fromTo("#leaf4", { rotate: 20 }, { rotate: 0 }, "-=.4");
+      .fromTo("#leaf5", { rotate: 10 }, { rotate: 0 }, "-=3")
+      .fromTo("#leaf6", { rotate: -20 }, { rotate: 0 }, "-=3")
+      .fromTo("#leaf1", { rotate: -20 }, { rotate: 0 }, "-=3")
+      .fromTo("#leaf2", { rotate: -10 }, { rotate: 0 }, "-=3")
+      .fromTo("#leaf4", { rotate: 20 }, { rotate: 0 }, "-=3");
   }, []);
 
   return (

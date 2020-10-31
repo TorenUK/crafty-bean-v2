@@ -11,7 +11,7 @@
 .footerLinks > .footerLinks__link > a .MuiSvgIcon-root {
   font-size: 28px;
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.5;
   transition: 0.3s;
   color: #fff;
   box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
@@ -20,7 +20,6 @@
 
 .footerLinks > .footerLinks__link > a .MuiSvgIcon-root:hover {
   opacity: 1;
-  font-size: 30px;
 }
 
 .footerLinks > .footerLinks__link > a > span {
